@@ -22,12 +22,16 @@
     }
   }
   
-  .header__inner {
+  &__inner {
     margin: 0 auto;
-    max-width: 1160px;
+    // max-width: 1160px;
     display : flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mq(xl){
+      max-width: 83%;
+    }
 
   }
 

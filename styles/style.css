@@ -928,12 +928,16 @@ img {
     width: 60px;
   }
 }
-.header .header__inner {
+.header__inner {
   margin: 0 auto;
-  max-width: 1160px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 1280px) {
+  .header__inner {
+    max-width: 83%;
+  }
 }
 .header__nav {
   display: none;
