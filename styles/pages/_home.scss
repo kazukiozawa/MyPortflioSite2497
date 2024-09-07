@@ -1,0 +1,331 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding:10px 20px;
+  //////
+  z-index: 200;
+  
+  @include mq(lg){
+    padding: 20px 40px;
+  }
+  
+  &__img {
+    width: 32px;
+    
+    @include mq(lg){
+      width: 60px;
+    }
+  }
+  
+  .header__inner {
+    margin: 0 auto;
+    max-width: 1160px;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  &__nav {
+    display: none;
+
+    @include mq(md){
+      display: block;
+    }
+  }
+
+  & .mobile-menu {
+    display: block;
+    @include mq(md){
+      display: none;
+    }
+    
+  }
+
+  &__ul {
+    list-style: none;
+  }
+
+  &__li {
+    display: inline-block;
+    padding-left: 15px;
+
+    @include mq(lg){
+      padding-left: 30px;
+    }
+    a {
+      font-family: "Roboto", sans-serif;
+      text-decoration: none;
+      color: $cBBlack;
+      font-weight: 500;
+      font-size: 14px;
+
+      @include mq(xl){
+        font-size: 16px;
+      }
+    }
+  }
+
+}
+
+.mv {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @extend .mb-lg;
+
+  &__title {
+    font-size: clamp(10px, 14.1vw, 101px);
+
+    text-align: end;
+
+
+  }
+
+  &__title-first {
+    color: $cBBlack;
+    line-height: .5;
+
+  }
+  &__title-second {
+    color: $cWhite;
+    -webkit-text-stroke: 1px $cBlue;
+    
+    @include mq(md){
+      -webkit-text-stroke: 2px $cBlue;
+      
+    }
+
+  }
+}
+
+.about {
+  // display: flex;
+  margin:0 auto;
+  border: 3px solid $cBlue;
+  position: relative;
+  padding-right: 6px;
+  @extend .mb-xl;
+
+  @include mq(md){
+    padding-right: 30px;
+    margin-left: auto;
+    .about__img-wrap {
+      margin-bottom: 0;
+    }
+    
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: 1000px;
+    padding-top: 58px;
+
+    .about__img-wrap {
+      max-width: 319px;
+    }
+    
+  }
+
+
+
+  &__decoration {
+    display: block;
+    background-color: $cBlue;
+    width: 27px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__bg-decoration {
+    display:none;
+    position: absolute;
+
+    @include mq(md){
+      display: block;
+      width: 25%;
+      ///////////////////
+      height: 40%;
+      top: 15px; 
+      right: 0;
+      background-image: url(../images/kazLogo.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      // background-fir
+    }
+  }
+
+  &__content {
+    padding-left: 60px;
+    position: relative;
+
+  }
+
+  &__title {
+    & .sub-title {
+      @extend .mb-sm;
+    }
+  }
+
+  &__title-second {
+    & .main-title {
+      color: $cBBlack;
+    }
+  }
+
+  &__body {
+    @include mq(md){
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    @media screen and (min-width: 1000px){
+      align-items: flex-end;
+      
+      
+    }
+  }
+  
+  &__img {
+    background-color: $cBgGray;
+    object-fit: cover;
+    &-wrap {
+      aspect-ratio: 2 / 3;
+      width: 70vw;
+      max-width: 360px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      @include mq(md){
+        
+        ////////////////////////
+        max-width: 289px;
+      }
+    }
+  }
+
+  &__list {
+    text-align: left;
+    width: 100%;
+    table-layout: auto;
+    word-break: break-all;  
+    
+
+    @include mq(md){
+      padding-left :30px;
+    }
+
+
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 1.7;
+    &:last-child {
+      .about__list-data {
+        margin-bottom: 0;
+
+      }
+    }
+    &-head {
+      color: $cBlue;
+      display: block;
+
+      &::before {
+        content:'';
+        display: inline-block;
+        height:11px;
+        width: 11px;
+        background-color: $cBlue;
+        margin-right: 5px;
+
+      }
+      
+    }
+    &-data {
+      display: block;
+      margin-bottom: 20px;
+  
+    }
+  }
+
+  &__viewmore-wrap {
+    height: 105px;
+    display : flex;
+    justify-content: end;
+    padding-right: 5px;
+    
+    & .view-more {
+      padding-top: 65px;
+    }
+
+  }
+}
+
+.work {
+  padding: 0 30px;
+  @extend .content-width;
+  @extend .mb-xl;
+
+  &__title {
+    //////////
+    .sub-title {
+      margin-bottom: 36px;
+
+      @include mq(md){
+        margin-bottom: 56px;
+      }
+
+    }
+  }
+
+
+  &__list {
+    padding: 0;
+    
+    @include mq(md ){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    margin-bottom: 20px;
+    
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 56.25%;
+
+      // background-image: url(../images/test.jpg);
+      // background-size: contain;
+      // background-repeat: no-repeat;
+      background-color: gray;
+
+    }
+
+    @include mq(md){
+      width: 48%;
+    }
+    @include mq(lg){
+      width: 32%;
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+  }
+  &__des {
+    font-size: 12px;
+  }
+
+}
+
