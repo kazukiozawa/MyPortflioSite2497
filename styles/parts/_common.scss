@@ -26,11 +26,14 @@ img {
     margin-bottom: 150px !important;
   }
 }
+////1017
 .mb-xl {
-  margin-bottom: 100px !important;
-
+  margin-bottom: 88px !important;
+  @include mq(md) {
+    margin-bottom: 142px !important;
+  }
   @include mq(lg) {
-    margin-bottom: 170px !important;
+    margin-bottom: 216px !important;
   }
 }
 
@@ -47,7 +50,6 @@ img {
 }
 
 .content-width {
-  // width: 90%;
   margin: 0 auto;
   max-width: $contentMaxWidth;
 }
@@ -70,6 +72,8 @@ img {
     font-size: 16px;
   }
 }
+
+
 .font-md {
   font-size: 17px;
 
@@ -85,24 +89,27 @@ img {
   }
 }
 .font-lg {
-  font-size: 32px;
-
+  font-size: 18px;
+  
   @include mq(lg) {
-    font-size: 48px;
+    font-size: 28px;
   }
 }
 
 .main-title {
-  @extend .font-lg;
+  font-size: 40px;
+  line-height: 1.2;
   color: $cBlue;
   font-weight: 600;
+  
+  @include mq(lg) {
+    font-size: 48px;
+  }
   // margin-bottom: 0;
   // display: block;
 }
 
 .sub-title {
-  // @extend .font-sm;
-  // @extend .mb-sm;
   line-height: .8;
   color: $cSubTitle;
   font-size: 14px;
@@ -129,45 +136,177 @@ img {
 
 }
 
+.header {
+  position: fixed;
+  width: 40px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  border-right: 1px solid $cBlack;
+  // padding:10px 20px;
+  //////
+  z-index: -200;
+  
+  @include mq(lg){
+    padding: 20px 40px;
+  }
+  
+  &__inner {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    // max-width: 1160px;
+    display : flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+  
+    @include mq(xl){
+      max-width: 83%;
+    }
+  
+  }
+
+  &__logo {
+    width: 100%;
+    flex-shrink: 0;
+    height: 80px;
+    border-bottom: 1px solid $cBlack;
+  }
+
+  &__link {
+    display: inline-block;
+    // width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+  }
+
+  &__img {
+    width: 92%;
+    margin:0 auto;
+    height: auto;
+    display: block;
+    
+    @include mq(lg){
+      width: 60px;
+    }
+  }
+  
+
+  &__nav {
+    display: none;
+
+    @include mq(md){
+      display: block;
+    }
+  }
+
+  & .mobile-menu {
+    display: block;
+    @include mq(md){
+      display: none;
+    }
+    
+  }
+
+  &__ul {
+    list-style: none;
+  }
+
+  &__li {
+    display: inline-block;
+    padding-left: 15px;
+
+    @include mq(lg){
+      padding-left: 30px;
+    }
+    a {
+      font-family: "Roboto", sans-serif;
+      text-decoration: none;
+      color: $cBBlack;
+      font-weight: 500;
+      font-size: 14px;
+
+      @include mq(xl){
+        font-size: 16px;
+      }
+    }
+  }
+
+}
+
 .contact {
-  padding: 30px;
+  padding: 16px 16px 0 16px;
   background-color: $cBlue;
+  margin-left: -40px;
+  padding-left: 70px;
 
   &__title {
+    width: 100%;
     .main-title,
     .sub-title {
       color: $cWhite;
     }
+
+    @include mq(md){
+      width: auto;
+    }
   }
 
-  &__part {
+  &__inner {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
     margin: 0 auto;
+
+    @include mq(md){
+      flex-direction: row;
+    }
+
+    &-line {
+      display: block;
+      height: 1px;
+      background-color: $cWhite;
+      width: 100%;
+
+      @include mq(md){
+        display: none;
+      }
+
+    }
+
+
   }
 
-  &__r {
-    height: 10vw;
-    width: 10vw;
-    max-width: 120px;
-    max-height: 120px;
-    border: 1px solid $cWhite;
+  &__bg {
+    height: 108px;
+    width: 108px;
+    // max-width: 120px;
+    // max-height: 120px;
+    border: 2px solid $cWhite;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    span {
-      height: 50%;
-      width: 50%;
-      border-top: 1px solid $cWhite;
-      border-left: 1px solid $cWhite;
-      transform: rotate(135deg);
-      display: block;
-      margin-right: 10px;
+    margin-top: 16px;
+    margin-bottom: 52px;
+    
+    &-mail {
+      width: 100%;
+      height: auto;
+      stroke: $cWhite;
     }
+
+    @include mq(md){
+      margin: 0;
+    }
+
   }
 
   
@@ -176,16 +315,53 @@ img {
 
 .footer {
   background-color: $cBlue;
+  color: $cWhite;
+  height: 72px;
+
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__btn {
+    cursor: pointer;
+    width: 39px;
+    height: 72px;
+    border: 1px solid $cWhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-str {
+      display: block;
+      font-weight: 600;
+      font-size: 12px;
+      display: inline-block;
+      transform: rotate(270deg);
+      letter-spacing: 0.05em;
+      color: $cWhite;
+    }
+    &-arrow {
+      display: block;
+      margin-top: -8px;
+      color: $cWhite;
+    }
+  
+  }
+
   .copy-right {
     text-align: center;
+    color:$cWhite;
+    font-size: 13px;
+
+    &__wrap {
+      width:100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
   }
-}
-
-.footer {
-  &__test {
-    height: 20px;
-  }
-
-  
-
 }

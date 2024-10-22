@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ozawa Kazuki Portfolio</title>
     <script src="scripts/vendors/pace.js"></script>
-    <link rel="stylesheet" href="styles/loader.css" />
+    <!-- <link rel="stylesheet" href="styles/loader.css" /> -->
+     <!-- //loaderあとで復活// -->
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +39,9 @@
         <header class="header">
           <div class="header__inner">
             <h1 class="header__logo">
-              <img class="header__img" src="images/kazLogo.svg" />
+              <a href="" class="header__link">
+                <img class="header__img" src="images/kazLogo.svg" />
+              </a>
             </h1>
             <nav class="header__nav">
               <ul class="header__ul">
@@ -52,14 +56,12 @@
                 </li>
               </ul>
             </nav>
-            <div class="mobile-menu">
-              <div class="mobile-menu__btn" id="menu-btn">
-                <div class="span-wrap">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-  
-                </div>
+            <div class="mobile-menu__btn" id="menu-btn">
+              <p class="mobile-menu__btn-str">MENU</p>
+              <div class="borders-wrap">
+                <span></span>
+                <span></span> 
+                <span></span>
               </div>
             </div>
           </div>
@@ -131,7 +133,7 @@
   
             </div>
           </section>
-          <section class="work">
+          <!-- <section class="work">
             <h2 class="work__title">
               <p class="main-title">Works</p>
               <p class="sub-title">制作物</p>
@@ -194,24 +196,48 @@
               </ul>
             </div>
   
-          </section>
+          </section> -->
           <section class="contact">
-            <div class="contact__part">
+            <div class="contact__inner">
               <div class="contact__title">
                 <h2 class="main-title">Contact</h2>
-                <p class="sub-title">お問合わせ</p>
-  
+                <p class="sub-title">お問い合わせ</p>
               </div>
-              <span class="contact__r">
-                <span></span>
+              <span class="contact__bg">
+                <svg class="contact__bg-mail" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 351 301">
+                  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+                  <defs>
+                    <style>
+                      .st0 {
+                        fill: none;
+                        stroke-miterlimit: 10;
+                        stroke-width: 13px;
+                      }
+                    </style>
+                  </defs>
+                  <line class="st0" x1="146.7" y1="150" x2="76" y2="220"/>
+                  <line class="st0" x1="276" y1="220" x2="205.3" y2="150"/>
+                  <polyline class="st0" points="276 80 176 179 76 80"/>
+                  <rect class="st0" x="76" y="80" width="200" height="140"/>
+                </svg>
+                <!-- <span></span> -->
               </span>
+              <span class="contact__inner-line"></span>
 
             </div>
           </section>
         </main>
         <footer class="footer">
-          <div class="footer__test"></div>
-          <small><p class="copy-right">&copy;2024 ozawa kazuki. All Rights Reserved.</p></small>
+          <div class="footer__inner">
+            <a href="#top" class="footer__btn">
+              <span class="footer__btn-arrow">↑</span>
+              <span class="footer__btn-str">TOP</span>
+            </a>
+            <div class="copy-right__wrap">
+              <small><p class="copy-right">&copy;2024 ozawa kazuki. All Rights Reserved.</p></small>
+            </div>
+
+          </div>
         </footer>
 
       </div>
