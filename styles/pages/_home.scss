@@ -2,40 +2,120 @@
 @use "../parts/common" as *;
 
 
-.main {
-  margin-left: 40px;
-  background-color: #e9e9e9;
-}
+
 .mv {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @extend .mb-lg;
+  height: 94vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+  &__title-wrap {
+    height: 26.9vh;
+    display: flex;
+    align-items: flex-end;
+  }
+
 
   &__title {
-    font-size: clamp(10px, 14.1vw, 101px);
+    display: inline-block;
 
-    text-align: end;
-
-
-  }
-
-  &__title-first {
-    color: $cBBlack;
-    line-height: .5;
-
-  }
-  &__title-second {
-    color: $cWhite;
-    -webkit-text-stroke: 1px $cBlue;
-    
-    @include mq(md){
-      -webkit-text-stroke: 2px $cBlue;
+    &-first {
       
+      font-size: clamp(10px, 6.4vw, 48px);
+      color: $cBlack;
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-style: oblique;
+      font-weight: 300;
+    }
+    &-second {
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-weight: bold;
+      font-size: clamp(10px, 13.33vw, 128px);
+      color: $cBlack;
+      line-height: .72;
+      
+    }
+    
+    &-third {
+      font-size: clamp(10px, 6.4vw, 48px);
+      font-weight: bold;
+      color: $cWhite;
+      -webkit-text-stroke: 1px $cBlue;
+      text-align: right;
+
+      
+      @include mq(md){
+        -webkit-text-stroke: 2px $cBlue;
+        
+      }
+      
+    }
+  }
+
+  &__txt-wrap {
+    width: min(100%, 304px);
+    @extend .font-md;
+    font-weight: 600;
+    margin-top: 2.884vh;
+
+  }
+
+  &__slide-wrap {
+    width: calc(100% + 32px);
+    margin-top: 10.57vh;
+    // margin-right: -16px;
+    margin-left: -16px;
+    
+    @include mq(sm){
+      max-width: 304px;
+      margin-left: auto;
+
+    }
+    @include mq(lg){
+      max-width: 384px;
+    }
+  }
+  
+  &__slide {
+    aspect-ratio: 1.414 / 1;
+    width:100%;
+    background-color: gray; 
+
+    @include mq(sm) {
+      aspect-ratio: 1;
+    }
+
+    @include mq(lg) {
+      aspect-ratio: auto;
+      width: 384px;
+      height: 302px;
+    }
+    &-descript {
+      font-size: 12px;
+      width: calc(100% - 32px);
+      line-height: 14px;
+      margin-top: 4px;
+      margin-left: 16px;
+      
+      
+      .blue {
+        color: $cBlue;
+      }
+      
+      @include mq(sm) {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      @include mq(md){
+        font-size: 14px;
+      }
     }
 
   }
+
+  
+
 }
 
 .about {
@@ -109,7 +189,7 @@
 
   &__title-second {
     & .main-title {
-      color: $cBBlack;
+      color: $cBlack;
     }
   }
 

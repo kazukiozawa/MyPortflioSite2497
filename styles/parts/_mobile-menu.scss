@@ -46,6 +46,10 @@ $cMenuOpen: $cBlue;
     justify-content: center;
     align-items: center;
 
+    @include mq(lg) {
+      display: none;
+    }
+
     &-str {
       font-weight: 600;
       font-size: 12px;
