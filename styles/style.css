@@ -923,7 +923,6 @@ img {
   top: 0;
   left: 0;
   border-right: 1px solid #00040c;
-  z-index: -200;
 }
 @media screen and (min-width: 600px) {
   .header {
@@ -943,11 +942,6 @@ img {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-}
-@media screen and (min-width: 1280px) {
-  .header__inner {
-    max-width: 83%;
-  }
 }
 .header__logo {
   width: 100%;
@@ -1012,11 +1006,6 @@ img {
   font-size: 12px;
   line-height: 2;
   padding-left: 20px;
-}
-@media screen and (min-width: 1280px) {
-  .header__li a {
-    font-size: 16px;
-  }
 }
 
 .contact {
@@ -1150,25 +1139,40 @@ img {
   display: inline-block;
 }
 .mv__title-first {
-  font-size: clamp(10px, 6.4vw, 48px);
+  font-size: 6.4vw;
   color: #00040c;
   font-family: "Helvetica", "Arial", sans-serif;
   font-style: oblique;
   font-weight: 300;
 }
+@media screen and (min-width: 600px) {
+  .mv__title-first {
+    font-size: min(3.75vw, 48px);
+  }
+}
 .mv__title-second {
   font-family: "Helvetica", "Arial", sans-serif;
   font-weight: bold;
-  font-size: clamp(10px, 13.33vw, 128px);
+  font-size: 13.33vw;
   color: #00040c;
-  line-height: 0.72;
+  line-height: 0.9;
+}
+@media screen and (min-width: 600px) {
+  .mv__title-second {
+    font-size: min(10vw, 128px);
+  }
 }
 .mv__title-third {
-  font-size: clamp(10px, 6.4vw, 48px);
+  font-size: 6.4vw;
   font-weight: bold;
   color: #ffffff;
   -webkit-text-stroke: 1px #1565e6;
   text-align: right;
+}
+@media screen and (min-width: 600px) {
+  .mv__title-third {
+    font-size: min(3.75vw, 48px);
+  }
 }
 @media screen and (min-width: 600px) {
   .mv__title-third {

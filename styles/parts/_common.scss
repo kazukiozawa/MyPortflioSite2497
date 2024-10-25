@@ -178,7 +178,7 @@ img {
   border-right: 1px solid $cBlack;
   // padding:10px 20px;
   //////
-  z-index: -200;
+  // z-index: -200;
 
 
   
@@ -199,11 +199,6 @@ img {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-
-  
-    @include mq(xl){
-      max-width: 83%;
-    }
   
   }
 
@@ -270,15 +265,12 @@ img {
       display: block;
       font-family: "Roboto", sans-serif;
       text-decoration: none;
-      color: $cBBlack;
+      color: $cBlack;
       font-weight: 500;
       font-size: 12px;
       line-height: 2;
       padding-left: 20px;
 
-      @include mq(xl){
-        font-size: 16px;
-      }
     }
   }
 
