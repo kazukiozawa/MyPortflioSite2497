@@ -103,6 +103,7 @@ img {
     font-size: 23px;
   }
 }
+
 .font-lg {
   font-size: 18px;
   
@@ -131,25 +132,47 @@ img {
   font-weight: 400;
 }
 
-
-
-.view-more {
-  color: $cBBlack;
-  text-decoration: none;
-  outline: none;
-  font-weight: 600;
-  font-size: 14px;
+.viewmore-link {
+  // height: 105px;
+  display : flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 5px;
   
-  &::after {
-    content: '';
-    display: block;
-    width: calc(100% + 3px);
-    height: 4px;
-    background-color: $cBlue;
+  // & .view-more {
 
+    
+  // }
+
+  .arrow-right {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    line-height: 1;
+    position: relative;
+    width: 19px;
+    height: 2px;  
+    background: currentColor;
+    margin-left: 4px;
+  }
+  
+  .arrow-right::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 2px solid currentColor;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    position: absolute;
+    top: 50%;
+    right: -0.05em;
+    box-sizing: border-box;
   }
 
 }
+
 .main {
   // background-color: #e9e9e9;
   width: calc(100% - 40px);
@@ -281,6 +304,8 @@ img {
   background-color: $cBlue;
   margin-left: -40px;
   padding-left: 70px;
+  position: relative;
+  z-index: 1;
   
   @include mq(md) {
     margin-left: -78px;
@@ -362,6 +387,8 @@ img {
   background-color: $cBlue;
   color: $cWhite;
   height: 72px;
+  position: relative;
+  z-index: 1;
 
 
   &__inner {

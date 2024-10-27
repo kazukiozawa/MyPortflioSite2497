@@ -136,35 +136,46 @@
   padding-left: 0;
   padding-right: 0;
   background-color: $cGray;
+  // background-color: teal;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   
   &__inner {
+    background-color: $cWhite;
     border: 3px solid $cBlue;
     position: relative;
     padding-top: 56px;
     margin-right: 16px;
-    padding-top: 16px;
-    padding-left: 16px;
-    padding-bottom: 16px;
-    @extend .mb-xl;
+    padding-left: 32px;
+    padding-right: 16px;
+
+    
+    // padding-bottom: 16px;
+    // @extend .mb-xl;
   
     @include mq(md){
+      margin-left: 16px;
+      max-width: 624px;
   
-      margin-left: auto;
-      .about__img-wrap {
-        margin-bottom: 0;
-      }
-      
+      margin:0 auto;
     }
   
-    @media screen and (min-width: 1000px) {
-      width: 1000px;
-      padding-top: 58px;
+    // @media screen and (min-width: 1000px) {
+    //   width: 1000px;
+    //   padding-top: 58px;
   
-      .about__img-wrap {
-        max-width: 319px;
-      }
+    //   .about__img-wrap {
+    //     max-width: 319px;
+    //   }
       
+    // }
+
+    @include mq(lg){
+      max-width: 976px;
+      width: 90%;
+      padding-left: 80px;
+      padding-right: 96px;
     }
 
 
@@ -198,11 +209,12 @@
     }
   }
 
-  &__content {
-    padding-left: 16px;
-    position: relative;
+  // &__content {
+  //   padding-left: 16px;
+  //   padding-right: 16px;
+  //   position: relative;
 
-  }
+  // }
 
   &__title {
     margin-bottom: 24px;
@@ -227,16 +239,11 @@
   }
 
   &__body {
-    @include mq(md){
+    @include mq(lg){
       display: flex;
       align-items: flex-start;
     }
     
-    @media screen and (min-width: 1000px){
-      align-items: flex-end;
-      
-      
-    }
   }
   
   &__img {
@@ -245,6 +252,8 @@
     &-wrap {
       width: 100%;
       max-width: 360px;
+      margin-bottom: 0;
+      margin-bottom: 24px;
       @include mq(md){
         
         ////////////////////////
@@ -260,7 +269,7 @@
     word-break: break-all;  
     
 
-    @include mq(md){
+    @include mq(lg){
       padding-left :30px;
     }
 
@@ -271,7 +280,7 @@
     font-size: 14px;
     line-height: 1.7;
     display: block;
-    padding-top: 24px;
+    padding-bottom: 24px;
 
     &:last-child {
       .about__list-data {
@@ -300,15 +309,11 @@
     }
   }
 
-  &__viewmore-wrap {
-    height: 105px;
-    display : flex;
-    justify-content: end;
-    padding-right: 5px;
-    
-    & .view-more {
-      padding-top: 65px;
-    }
+  &__viewmore-link {
+    height: 68px;
+    border-top: 1px solid $cBlack;
+    // margin-top: 24px;  
+    cursor: pointer;
 
   }
 }
