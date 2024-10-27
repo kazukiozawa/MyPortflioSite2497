@@ -133,38 +133,47 @@
 }
 
 .about {
-  // display: flex;
-  margin:0 auto;
-  border: 3px solid $cBlue;
-  position: relative;
-  padding-right: 6px;
-  @extend .mb-xl;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: $cGray;
 
-  @include mq(md){
-    padding-right: 30px;
-    margin-left: auto;
-    .about__img-wrap {
-      margin-bottom: 0;
+  
+  &__inner {
+    border: 3px solid $cBlue;
+    position: relative;
+    padding-top: 56px;
+    margin-right: 16px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    @extend .mb-xl;
+  
+    @include mq(md){
+  
+      margin-left: auto;
+      .about__img-wrap {
+        margin-bottom: 0;
+      }
+      
     }
-    
-  }
-
-  @media screen and (min-width: 1000px) {
-    width: 1000px;
-    padding-top: 58px;
-
-    .about__img-wrap {
-      max-width: 319px;
+  
+    @media screen and (min-width: 1000px) {
+      width: 1000px;
+      padding-top: 58px;
+  
+      .about__img-wrap {
+        max-width: 319px;
+      }
+      
     }
-    
+
+
   }
-
-
 
   &__decoration {
     display: block;
     background-color: $cBlue;
-    width: 27px;
+    width: 16px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -190,21 +199,31 @@
   }
 
   &__content {
-    padding-left: 60px;
+    padding-left: 16px;
     position: relative;
 
   }
 
   &__title {
-    & .sub-title {
-      @extend .mb-sm;
-    }
+    margin-bottom: 24px;
+    display: flex; 
+    flex-wrap: wrap;
+
   }
 
-  &__title-second {
-    & .main-title {
-      color: $cBlack;
-    }
+  &__title-first {
+    margin-bottom: 8px;
+    margin-right: 32px;
+
+  }
+    
+    &__title-second {
+      & .main-title {
+        color: $cBlack;
+      }
+        // & .sub-title {
+          
+        // }
   }
 
   &__body {
@@ -221,14 +240,11 @@
   }
   
   &__img {
-    background-color: $cBgGray;
+    background-color: $cGray;
     object-fit: cover;
     &-wrap {
-      aspect-ratio: 2 / 3;
-      width: 70vw;
+      width: 100%;
       max-width: 360px;
-      margin: 0 auto;
-      margin-bottom: 50px;
       @include mq(md){
         
         ////////////////////////
@@ -254,6 +270,9 @@
   &__item {
     font-size: 14px;
     line-height: 1.7;
+    display: block;
+    padding-top: 24px;
+
     &:last-child {
       .about__list-data {
         margin-bottom: 0;
@@ -277,7 +296,6 @@
     }
     &-data {
       display: block;
-      margin-bottom: 20px;
   
     }
   }

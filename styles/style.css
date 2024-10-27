@@ -772,7 +772,7 @@ img {
   vertical-align: bottom;
 }
 
-.mb-sm, .about__title .sub-title {
+.mb-sm {
   margin-bottom: 16px !important;
 }
 
@@ -785,16 +785,16 @@ img {
   }
 }
 
-.mb-xl, .about {
+.mb-xl, .about__inner {
   margin-bottom: 88px !important;
 }
 @media screen and (min-width: 600px) {
-  .mb-xl, .about {
+  .mb-xl, .about__inner {
     margin-bottom: 142px !important;
   }
 }
 @media screen and (min-width: 960px) {
-  .mb-xl, .about {
+  .mb-xl, .about__inner {
     margin-bottom: 216px !important;
   }
 }
@@ -899,7 +899,6 @@ img {
 }
 
 .main {
-  background-color: #e9e9e9;
   width: calc(100% - 40px);
   margin-left: 40px;
 }
@@ -1240,33 +1239,40 @@ img {
 }
 
 .about {
-  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #f2f2f2;
+}
+.about__inner {
   border: 3px solid #1565e6;
   position: relative;
-  padding-right: 6px;
+  padding-top: 56px;
+  margin-right: 16px;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 16px;
 }
 @media screen and (min-width: 600px) {
-  .about {
-    padding-right: 30px;
+  .about__inner {
     margin-left: auto;
   }
-  .about .about__img-wrap {
+  .about__inner .about__img-wrap {
     margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1000px) {
-  .about {
+  .about__inner {
     width: 1000px;
     padding-top: 58px;
   }
-  .about .about__img-wrap {
+  .about__inner .about__img-wrap {
     max-width: 319px;
   }
 }
 .about__decoration {
   display: block;
   background-color: #1565e6;
-  width: 27px;
+  width: 16px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -1289,8 +1295,17 @@ img {
   }
 }
 .about__content {
-  padding-left: 60px;
+  padding-left: 16px;
   position: relative;
+}
+.about__title {
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about__title-first {
+  margin-bottom: 8px;
+  margin-right: 32px;
 }
 .about__title-second .main-title {
   color: #00040c;
@@ -1307,16 +1322,13 @@ img {
   }
 }
 .about__img {
-  background-color: #eaebe6;
+  background-color: #f2f2f2;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .about__img-wrap {
-  aspect-ratio: 2/3;
-  width: 70vw;
+  width: 100%;
   max-width: 360px;
-  margin: 0 auto;
-  margin-bottom: 50px;
 }
 @media screen and (min-width: 600px) {
   .about__img-wrap {
@@ -1337,6 +1349,8 @@ img {
 .about__item {
   font-size: 14px;
   line-height: 1.7;
+  display: block;
+  padding-top: 24px;
 }
 .about__item:last-child .about__list-data {
   margin-bottom: 0;
@@ -1355,7 +1369,6 @@ img {
 }
 .about__item-data {
   display: block;
-  margin-bottom: 20px;
 }
 .about__viewmore-wrap {
   height: 105px;
