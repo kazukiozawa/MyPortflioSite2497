@@ -167,3 +167,17 @@
     }
   }
 }
+
+
+.bent-arrow {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: -8px;
+  border-top: 2.5px $cBlack solid;
+  border-right: 2.5px $cBlack solid;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
