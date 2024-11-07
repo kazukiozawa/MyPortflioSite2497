@@ -11,15 +11,25 @@ body {
   padding-left: 16px;
   margin: 0 auto;
   // width: min()
+  margin-bottom: 96px;
 
   @include mq(md) {
     padding-right: 8.415vw;
     padding-left: 8.415vw;
+    margin-bottom: 120px;
   }
   @include mq(lg) {
     padding: 0;
-
+    width: calc(100% - 16.83vw);
+    max-width: 1080px;
+    margin-bottom: 216px;
     //////////!!!
+  }
+}
+
+section + section {
+  @include mq(lg){
+    margin-top: 216px;
   }
 }
 
@@ -134,6 +144,11 @@ img {
   color: $cSubTitle;
   font-size: 14px;
   font-weight: 400;
+  margin-bottom: 40px;
+
+  @include mq(lg){
+    margin-bottom: 64px;
+  }
 }
 
 .viewmore-link {

@@ -24,7 +24,7 @@
 
   &__scrolldown {
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
     display: none;
 
@@ -33,7 +33,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      border: 2px solid $cHardG;
+      border: 2px solid $cSoftG;
       width: 102px;
       height: 102px;
       border-radius: 50%;
@@ -42,39 +42,37 @@
     &-str {
       font-size: 11px;
     }
-
+    
     &-arrow {
       transform:  transformY(4px) rotate(-225deg);
       animation: bounce 2s linear infinite;
+      color: $cSoftG;
 
     }
 
     @keyframes bounce {
-      0%,
-      100%,
-      20%,
-      50%,
-      70%,
-      80% {
-        -webkit-transform: translateY(0)rotate(-225deg);
-        -ms-transform: translateY(0)rotate(-225deg);
-        transform: translateY(0)rotate(-225deg);
+      0% {
+        transform: translateY(4px) rotate(-225deg);
+        opacity: 0;
       }
       40% {
-        -webkit-transform: translateY(-8px)rotate(-225deg);
-        -ms-transform: translateY(-8px)rotate(-225deg);
-        transform: translateY(-8px)rotate(-225deg);
+        transform: translateY(8px) rotate(-225deg);
+        opacity: 1;
       }
       60% {
-        -webkit-transform: translateY(-4px)rotate(-225deg);
-        -ms-transform: translateY(-4px)rotate(-225deg);
-        transform: translateY(-4px)rotate(-225deg);
+        transform: translateY(12px) rotate(-225deg);
+        opacity: 1;
       }
+      100% {
+        transform: translateY(16px) rotate(-225deg);
+        opacity: 0;
+      }
+
     }
   }
 
   &__title-wrap {
-    height: 26.9vh;
+    height: 33.9vh;
     display: flex;
     align-items: flex-end;
   }
@@ -135,7 +133,7 @@
 
   &__slide-wrap {
     width: calc(100% + 32px);
-    margin-top: 10.57vh;
+    margin-top: 3.57vh;
     // margin-right: -16px;
     margin-left: -16px;
 
@@ -192,6 +190,15 @@
   // background-color: teal;
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-bottom: 96px;
+
+  @include mq(md){
+    margin-bottom: 120px;
+  }
+  
+  @include mq(lg) {
+    margin-bottom: 216px;
+  }
 
   &__inner {
     background-color: $cWhite;
@@ -353,6 +360,10 @@
     // margin-top: 24px;
     cursor: pointer;
   }
+}
+
+.work {
+  @extend .basic-section;
 }
 
 // .work {
