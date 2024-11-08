@@ -331,6 +331,10 @@ img {
     @include mq(md) {
       width: auto;
     }
+    .sub-title {
+      margin-bottom: 0;
+
+    }
   }
 
   &__inner {

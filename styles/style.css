@@ -944,6 +944,9 @@ img {
     width: auto;
   }
 }
+.contact__title .sub-title {
+  margin-bottom: 0;
+}
 .contact__inner {
   height: 100%;
 }
