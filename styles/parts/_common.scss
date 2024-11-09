@@ -162,9 +162,20 @@ img {
 
   // }
 
+}
+
+.view-more {
+  span {
+    vertical-align: middle;
+    font-size: 16px;
+
+    @include mq(lg){
+      font-size: 20px;
+    }
+  }
+  
   .arrow-right {
     display: inline-block;
-    vertical-align: middle;
     color: #333;
     line-height: 1;
     position: relative;
@@ -173,7 +184,7 @@ img {
     background: currentColor;
     margin-left: 4px;
   }
-
+  
   .arrow-right::before {
     content: "";
     width: 10px;
@@ -188,6 +199,7 @@ img {
     right: -0.05em;
     box-sizing: border-box;
   }
+
 }
 
 .main {

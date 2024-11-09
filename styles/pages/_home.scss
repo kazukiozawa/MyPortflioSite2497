@@ -364,6 +364,135 @@
 
 .work {
   @extend .basic-section;
+
+  &__item {
+    display: flex;
+
+    
+    &-link {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid $cBlack;
+      padding: 16px;
+      
+      @include mq(md) {
+        flex-direction: row;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+
+      @include mq(md){
+        margin-left: 16px;
+
+
+      }
+
+      & .view-more {
+        text-align: end;
+        font-size:14px;
+      }
+    }
+
+  }
+  &__number {
+    width: 10vw;
+    padding-top: 16px;
+    font-weight: bold;
+
+    @include mq(md){
+      width: 64px;
+    }
+
+    &-index {
+      font-size: 32px;
+      color: $cBlue;
+      font-weight: bold;
+    }
+
+    &-maxIndex {
+      display: none;
+      color: $cBlue;
+
+      @include mq(md){
+        display: inline;
+      }
+    }
+
+  }
+
+  
+  &__thum {
+    aspect-ratio: 1 / 1;
+    background-color: gray; 
+    margin-bottom: 16px;
+    
+    @include mq(md) {
+      max-width: 212px;
+      width: 100%;
+      margin-bottom: 0;
+
+    }
+
+    @include mq(lg){
+      max-width: 304px;
+    }
+  }
+
+  &__info-wrap {
+    height: 112px;
+
+    @include mq(md){
+      height: auto;
+    }
+  }
+
+  &__style {
+    display: inline-block;
+    padding: 2px 4px 2px;
+    background-color: $cBlue;
+    color: $cWhite;
+    font-size: 14px;
+  }
+
+  &__date {
+    font-size: 14px;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight:500;
+    margin-top: 8px;
+
+    @include mq(md){
+      font-size: 18px;
+      margin-top: 16px;
+    }
+    @include mq(lg){
+      font-size: 28px;
+      margin-top: 24px;
+    }
+
+    &-en {
+      display: none;
+      font-size: 12px;
+      color: $cHardG;
+      
+
+      @include mq(md) {
+        display: block;
+      }
+
+      @include mq(lg){
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 // .work {
