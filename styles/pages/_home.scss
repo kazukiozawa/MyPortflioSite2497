@@ -75,6 +75,10 @@
     height: 33.9vh;
     display: flex;
     align-items: flex-end;
+
+    @include mq(lg){
+      height: 37.9vh;
+    }
   }
 
   &__title {
@@ -129,6 +133,10 @@
     @extend .font-md;
     font-weight: 600;
     margin-top: 2.884vh;
+
+    @include mq(lg){
+      margin-top: 0;
+    }
   }
 
   &__slide-wrap {
@@ -136,7 +144,7 @@
     margin-top: 3.57vh;
     // margin-right: -16px;
     margin-left: -16px;
-
+    
     @include mq(sm) {
       max-width: 304px;
       margin-left: auto;
@@ -145,11 +153,27 @@
       max-width: 384px;
     }
   }
-
+  
   &__slide {
     aspect-ratio: 1.414 / 1;
     width: 100%;
-    background-color: gray;
+    border-top: 1px solid $cBlack;
+    border-bottom: 1px solid $cBlack;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(sm){
+      border: 1px solid $cBlack;
+    }
+
+    & img {
+      width: 60%;
+      height: 90%;
+
+    }
+    // background: url(../images/kazLogo.svg);
+    // background-color: gray;
 
     @include mq(sm) {
       aspect-ratio: 1;
