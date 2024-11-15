@@ -116,6 +116,7 @@ $cMenuOpen: $cBlue;
   & #mobile-menu__container   {
     display: block;
     transform-origin: top;
+    margin-left: 40px;
     // transition: transform .8s;
     // transform: scale(1);
     @include animation(
@@ -124,6 +125,10 @@ $cMenuOpen: $cBlue;
               $timing-function: ease-in-out,
               $fill-mode: both
     );
+
+    @include mq(md){
+      margin-left: 78px;
+    }
 
   }
 

@@ -469,6 +469,7 @@
 .menu-open #mobile-menu__container {
   display: block;
   transform-origin: top;
+  margin-left: 40px;
   animation-name: kf-menu-appear;
   animation-duration: 0.7s;
   animation-timing-function: ease-in-out;
@@ -476,6 +477,11 @@
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: both;
+}
+@media screen and (min-width: 600px) {
+  .menu-open #mobile-menu__container {
+    margin-left: 78px;
+  }
 }
 .menu-open .mobile-menu__item {
   transform: none;
@@ -1191,17 +1197,12 @@ img {
   font-size: 6.4vw;
   font-weight: bold;
   color: #ffffff;
-  -webkit-text-stroke: 1px #1565e6;
+  -webkit-text-stroke: 0.085rem #1565e6;
   text-align: right;
 }
 @media screen and (min-width: 600px) {
   .mv__title-third {
     font-size: min(3.75vw, 48px);
-  }
-}
-@media screen and (min-width: 600px) {
-  .mv__title-third {
-    -webkit-text-stroke: 2px #1565e6;
   }
 }
 .mv__txt-wrap {
