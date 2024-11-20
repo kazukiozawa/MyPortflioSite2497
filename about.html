@@ -31,6 +31,104 @@
         <script src="scripts/main.js" defer></script>
       </head>
 <body>
+  <div id="global-container">
+    <div id="container">
+      <header class="header">
+        <div class="header__inner">
+          <h1 class="header__logo">
+            <a href="" class="header__link">
+              <img class="header__img" src="images/kazLogo.svg" />
+            </a>
+          </h1>
+          <nav class="header__nav">
+            <ul class="header__ul">
+              <li class="header__li">
+                <a href="#" class="header__link">ABOUT</a>
+              </li>
+              <li class="header__li">
+                <a href="#" class="header__link">WORKS</a>
+              </li>
+              <li class="header__li">
+                <a href="#" class="header__link">CONTACT</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="mobile-menu__btn" id="menu-btn">
+            <p class="mobile-menu__btn-str">MENU</p>
+            <div class="borders-wrap">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="sticky__container">
+          <div class="stickyImg-wrap">
+            <img src="images/author.webp" alt="本人" class="stickyImg">
+          </div>
+          <section class="aboutMv">
+            <div class="aboutMv__container">
+              <div class="aboutMv__bg"></div>
+              <div class="aboutMv__info"></div>
+            </div>
+          </section>
+          <section class="test"></section>
+
+        </div>
+        <section class="contact">
+          <div class="contact__inner">
+            <a href="" class="contact__link">
+              <div class="contact__title">
+                <h2 class="main-title">Contact</h2>
+                <p class="sub-title">お問い合わせ</p>
+              </div>
+              <span class="contact__bg">
+                <svg
+                  class="contact__bg-mail"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  viewBox="0 0 351 301"
+                >
+                  <defs>
+                    <style>
+                      .st0 {
+                        fill: none;
+                        stroke-miterlimit: 10;
+                        stroke-width: 13px;
+                      }
+                    </style>
+                  </defs>
+                  <line class="st0" x1="146.7" y1="150" x2="76" y2="220" />
+                  <line class="st0" x1="276" y1="220" x2="205.3" y2="150" />
+                  <polyline class="st0" points="276 80 176 179 76 80" />
+                  <rect class="st0" x="76" y="80" width="200" height="140" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__inner">
+          <a href="#top" class="footer__topbtn">
+            <span class="footer__topbtn-arrow bent-arrow"></span>
+            <span class="footer__topbtn-str">TOP</span>
+          </a>
+          <div class="copyright__wrap">
+            <small
+              ><p class="copyright">
+                &copy;2024 ozawa kazuki. All Rights Reserved.
+              </p></small
+            >
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <div id="mobile-menu__container"></div>
+  </div>
     
 </body>
 </html>

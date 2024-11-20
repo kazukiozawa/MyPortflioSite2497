@@ -1,0 +1,50 @@
+@use "../globals" as *;
+
+.test {
+  height: 150vh;
+  background-color: teal;
+  margin-top: 0;
+}
+
+.stickyImg {
+  width: 100%;
+  height: auto;
+
+  &-wrap {
+    height: 417px;
+    width: 284px;
+    position: sticky;
+    top: 200px;
+    right: 20px;
+    margin-left: auto;
+  }
+}
+
+.aboutMv {
+  margin-top: -417px;
+  margin-left: -40px;
+  position: relative; 
+  z-index: -100;
+
+  
+  
+  //   background-color: $cBlue;
+  //   position: relative;
+  
+  @include mq(md) {
+      margin-left: -78px;
+      
+    }
+    @include mq(lg) {
+        margin-left: -102px;
+        
+    }
+    
+    &__bg {
+        height: 416px;
+        background-image: url(../images/author.webp);
+        background-size: cover;
+        background-position: bottom;
+        filter: blur(20px);
+  }
+}
