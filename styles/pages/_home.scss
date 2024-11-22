@@ -366,22 +366,7 @@
         margin-bottom: 0;
       }
     }
-    &-head {
-      color: $cBlue;
-      display: block;
-
-      &::before {
-        content: "";
-        display: inline-block;
-        height: 11px;
-        width: 11px;
-        background-color: $cBlue;
-        margin-right: 5px;
-      }
-    }
-    &-data {
-      display: block;
-    }
+    
   }
 
   &__viewmore-link {

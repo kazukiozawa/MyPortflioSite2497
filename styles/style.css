@@ -1138,6 +1138,38 @@ img {
   }
 }
 
+.table-head {
+  display: block;
+}
+.table-head::before {
+  content: "";
+  display: inline-block;
+  height: 11px;
+  width: 11px;
+  background-color: #1565e6;
+  margin-right: 5px;
+}
+
+.table-data {
+  display: block;
+}
+
+.tool-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tool-name {
+  display: inline-block;
+  border: 1px solid #00040c;
+  padding: 4px 6px;
+}
+.tool-name.language {
+  background-color: #00040c;
+  color: #ffffff;
+}
+
 .mv {
   position: relative;
   height: 94vh;
@@ -1461,21 +1493,6 @@ img {
 .about__item:last-child .about__list-data {
   margin-bottom: 0;
 }
-.about__item-head {
-  color: #1565e6;
-  display: block;
-}
-.about__item-head::before {
-  content: "";
-  display: inline-block;
-  height: 11px;
-  width: 11px;
-  background-color: #1565e6;
-  margin-right: 5px;
-}
-.about__item-data {
-  display: block;
-}
 .about__viewmore-link {
   height: 68px;
   border-top: 1px solid #00040c;
@@ -1707,4 +1724,7 @@ img {
     padding-bottom: 32px;
     padding-right: 400px;
   }
+}
+.skill__item {
+  border-top: 1px solid;
 }/*# sourceMappingURL=style.css.map */
