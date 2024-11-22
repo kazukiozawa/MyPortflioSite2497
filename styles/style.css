@@ -631,7 +631,7 @@ body {
   .basic-section, .sticky__container, .aboutMv__intro, .skill__container, .mv__container, .work {
     padding-right: 8.415vw;
     padding-left: 8.415vw;
-    margin-bottom: 120px;
+    margin-bottom: 130px;
   }
 }
 @media screen and (min-width: 960px) {
@@ -639,7 +639,7 @@ body {
     padding: 0;
     width: calc(100% - 16.83vw);
     max-width: 1080px;
-    margin-bottom: 216px;
+    margin-bottom: 200px;
   }
 }
 
@@ -769,7 +769,7 @@ img {
   }
 }
 
-.sub-title {
+.sub-title, .boldSub-title {
   line-height: 0.8;
   color: #535353;
   font-size: 14px;
@@ -777,8 +777,22 @@ img {
   margin-bottom: 40px;
 }
 @media screen and (min-width: 960px) {
-  .sub-title {
+  .sub-title, .boldSub-title {
     margin-bottom: 64px;
+  }
+}
+
+.bold-title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.boldSub-title {
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 960px) {
+  .boldSub-title {
+    margin-bottom: 24px;
   }
 }
 
@@ -957,7 +971,8 @@ img {
   width: 100%;
 }
 .contact__title .main-title,
-.contact__title .sub-title {
+.contact__title .sub-title,
+.contact__title .boldSub-title {
   color: #ffffff;
 }
 @media screen and (min-width: 600px) {
@@ -965,7 +980,7 @@ img {
     width: auto;
   }
 }
-.contact__title .sub-title {
+.contact__title .sub-title, .contact__title .boldSub-title {
   margin-bottom: 0;
 }
 .contact__inner {
@@ -1108,7 +1123,7 @@ img {
 .pageTitle {
   font-size: 50px;
   color: #ffffff;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
   font-weight: 500;
 }
 @media screen and (min-width: 960px) {
@@ -1164,6 +1179,7 @@ img {
   display: inline-block;
   border: 1px solid #00040c;
   padding: 4px 6px;
+  font-size: 14px;
 }
 .tool-name.language {
   background-color: #00040c;
@@ -1717,16 +1733,35 @@ img {
 
 .skill {
   background-color: #f2f2f2;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  margin-bottom: 130px;
+}
+@media screen and (min-width: 960px) {
+  .skill {
+    margin-bottom: 200px;
+  }
+}
+.skill__container {
+  margin-bottom: 0;
 }
 @media screen and (min-width: 960px) {
   .skill__container {
     padding-top: 32px;
-    padding-bottom: 32px;
     padding-right: 400px;
   }
 }
 .skill__item {
   border-top: 1px solid;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.skill__txt {
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 960px) {
+  .skill__txt {
+    margin-bottom: 56px;
+  }
+}
+.skill__table .table-head {
+  margin-bottom: 8px;
 }/*# sourceMappingURL=style.css.map */

@@ -16,13 +16,13 @@ body {
   @include mq(md) {
     padding-right: 8.415vw;
     padding-left: 8.415vw;
-    margin-bottom: 120px;
+    margin-bottom: 130px;
   }
   @include mq(lg) {
     padding: 0;
     width: calc(100% - 16.83vw);
     max-width: 1080px;
-    margin-bottom: 216px;
+    margin-bottom: 200px;
     //////////!!!
   }
 }
@@ -155,6 +155,20 @@ img {
 
   @include mq(lg) {
     margin-bottom: 64px;
+  }
+}
+
+.bold-title {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.boldSub-title {
+  @extend .sub-title;
+  margin-bottom: 16px;
+  
+  @include mq(lg) {
+    margin-bottom: 24px;
   }
 }
 
@@ -495,7 +509,7 @@ img {
 .pageTitle {
   font-size: 50px;
   color: $cWhite;
-  text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+  text-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
   font-weight: 500;
 
 
@@ -550,6 +564,7 @@ img {
   display: inline-block;
   border: 1px solid $cBlack;
   padding: 4px 6px;
+  font-size: 14px;
 
   &.language {
     background-color: $cBlack;
