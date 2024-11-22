@@ -1638,13 +1638,16 @@ img {
 }
 
 .sticky__container {
+  position: absolute;
   margin-bottom: 0;
-  position: sticky;
   top: 116px;
+  width: 100%;
 }
 @media screen and (min-width: 960px) {
   .sticky__container {
+    position: sticky;
     top: 200px;
+    width: calc(100% - 16.83vw);
   }
 }
 .sticky__img-wrap {
@@ -1668,7 +1671,6 @@ img {
 }
 
 .aboutMv {
-  margin-top: -323px;
   position: relative;
   z-index: -100;
 }
