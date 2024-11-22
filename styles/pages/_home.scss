@@ -17,9 +17,7 @@
     @include mq(lg){
       width: calc(100% - 16.83vw);
       max-width: 1080px;
-
     }
-
   }
 
   &__scrolldown {
@@ -131,7 +129,7 @@
     }
   }
 
-  &__txt-wrap {
+  &__catch-wrap {
     width: min(100%, 304px);
     @extend .font-md;
     font-weight: 600;

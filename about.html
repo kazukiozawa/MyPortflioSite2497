@@ -1,134 +1,199 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>About Me - Ozawa Kazuki Portfolio</title>
-    
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="stylesheet" href="styles/vendors/css-reset.css" />
-        <link rel="stylesheet" href="styles/vendors/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="styles/style.css" />
-    
-        <script src="scripts/vendors/gsap.min.js" defer></script>
-    
-        <script src="scripts/vendors/swiper-bundle.min.js" defer></script>
-        <script src="scripts/libs/hero-slider.js" defer></script>
-    
-        <script src="scripts/vendors/scroll-polyfill.js" defer></script>
-        <script src="scripts/libs/scroll.js" defer></script>
-    
-        <script src="scripts/libs/mobile-menu.js" defer></script>
-        <!-- <script src="scripts/libs/gsap-test.js" defer></script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Me - Ozawa Kazuki Portfolio</title>
 
-        <script src="scripts/libs/text-animation.js" defer></script>
-        <script src="scripts/main.js" defer></script>
-      </head>
-<body>
-  <div id="global-container">
-    <div id="container">
-      <header class="header">
-        <div class="header__inner">
-          <h1 class="header__logo">
-            <a href="" class="header__link">
-              <img class="header__img" src="images/kazLogo.svg" />
-            </a>
-          </h1>
-          <nav class="header__nav">
-            <ul class="header__ul">
-              <li class="header__li">
-                <a href="#" class="header__link">ABOUT</a>
-              </li>
-              <li class="header__li">
-                <a href="#" class="header__link">WORKS</a>
-              </li>
-              <li class="header__li">
-                <a href="#" class="header__link">CONTACT</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="mobile-menu__btn" id="menu-btn">
-            <p class="mobile-menu__btn-str">MENU</p>
-            <div class="borders-wrap">
-              <span></span>
-              <span></span>
-              <span></span>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/vendors/css-reset.css" />
+    <link rel="stylesheet" href="styles/vendors/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="scripts/vendors/gsap.min.js" defer></script>
+
+    <script src="scripts/vendors/swiper-bundle.min.js" defer></script>
+    <script src="scripts/libs/hero-slider.js" defer></script>
+
+    <script src="scripts/vendors/scroll-polyfill.js" defer></script>
+    <script src="scripts/libs/scroll.js" defer></script>
+
+    <script src="scripts/libs/mobile-menu.js" defer></script>
+    <!-- <script src="scripts/libs/gsap-test.js" defer></script> -->
+
+    <script src="scripts/libs/text-animation.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <div id="global-container">
+      <div id="container">
+        <header class="header">
+          <div class="header__inner">
+            <h1 class="header__logo">
+              <a href="index.html" class="header__link">
+                <img class="header__img" src="images/kazLogo.svg" />
+              </a>
+            </h1>
+            <nav class="header__nav">
+              <ul class="header__ul">
+                <li class="header__li">
+                  <a href="#" class="header__link">ABOUT</a>
+                </li>
+                <li class="header__li">
+                  <a href="#" class="header__link">WORKS</a>
+                </li>
+                <li class="header__li">
+                  <a href="#" class="header__link">CONTACT</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="mobile-menu__btn" id="menu-btn">
+              <p class="mobile-menu__btn-str">MENU</p>
+              <div class="borders-wrap">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
-      <main class="main">
-        <div class="sticky__container">
-          <div class="stickyImg-wrap">
-            <img src="images/author.webp" alt="本人" class="stickyImg">
+        </header>
+        <main class="main">
+          <div class="sticky__area">
+            <div class="sticky__container">
+              <div class="sticky__img-wrap">
+                <!-- <img src="images/author.webp" alt="本人" class="stickyImg" /> -->
+              </div>
+            </div>
+            <div class="pageTitle__container">
+                <h2 class="pageTitle">ABOUT</h2>
+            </div>
+            <section class="aboutMv">
+              <div class="aboutMv__container">
+                <div class="aboutMv__bg"></div>
+                <div class="aboutMv__intro">
+                    <h2 class="aboutMv__title">
+                        <p class="main-title">Ozawa K</p>
+                        <p class="sub-title">小澤一貴</p>
+                    </h2>
+                    <p class="aboutMv__txt">1998年熊本県生まれ、愛知県育ち。
+                        デザインや開発の専門知識に加え、マネジメントやマーケティング戦略なども幅広く学びながら仕事に取り組み、Web業界でクリエイティブディレクターを目指していきたいです。クライアントの期待を超えるクリエイティブなデザインで、ターゲットの心を動かし確実な成果を上げることを目標としています。</p>
+                </div>
+              </div>
+            </section>
+            <section class="skill">
+              <div class="skill__container">
+                <h2 class="skill__title">
+                  <p class="main-title">SKILLS</p>
+                  <p class="sub-title">スキル</p>
+                </h2>
+                <ul class="skill__list">
+                  <li class="skill__item">
+                    <h3 class="skill__item-title">
+                      <p class="bold-title">Web Design</p>
+                      <p class="boldSub-title">(デザイン)</p>
+                    </h3>
+                    <p class="skill__title-txt">
+                      アドビアプリでイラスト、ロゴ、バナーといったマテリアルやfigmaでサイトのデザインカンプを作成します。ターゲットにクライアントの大事な特徴が伝わるデザイン、心を動かすデザインで目標を達成していきたいです。
+                    </p>
+                    <table class="skill__tool">
+                      <tr>
+                        <th class="skill__tool-title"></th>
+                      </tr>
+                      
+                    </table>
+
+                  </li>
+                </ul>
+              </div>
+
+            </section>
+            <section class="test"></section>
           </div>
-          <section class="aboutMv">
-            <div class="aboutMv__container">
-              <div class="aboutMv__bg"></div>
-              <div class="aboutMv__info"></div>
+          <section class="contact">
+            <div class="contact__inner">
+              <a href="" class="contact__link">
+                <div class="contact__title">
+                  <h2 class="main-title">Contact</h2>
+                  <p class="sub-title">お問い合わせ</p>
+                </div>
+                <span class="contact__bg">
+                  <svg
+                    class="contact__bg-mail"
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    viewBox="0 0 351 301"
+                  >
+                    <defs>
+                      <style>
+                        .st0 {
+                          fill: none;
+                          stroke-miterlimit: 10;
+                          stroke-width: 13px;
+                        }
+                      </style>
+                    </defs>
+                    <line class="st0" x1="146.7" y1="150" x2="76" y2="220" />
+                    <line class="st0" x1="276" y1="220" x2="205.3" y2="150" />
+                    <polyline class="st0" points="276 80 176 179 76 80" />
+                    <rect class="st0" x="76" y="80" width="200" height="140" />
+                  </svg>
+                </span>
+              </a>
             </div>
           </section>
-          <section class="test"></section>
-
-        </div>
-        <section class="contact">
-          <div class="contact__inner">
-            <a href="" class="contact__link">
-              <div class="contact__title">
-                <h2 class="main-title">Contact</h2>
-                <p class="sub-title">お問い合わせ</p>
-              </div>
-              <span class="contact__bg">
-                <svg
-                  class="contact__bg-mail"
-                  xmlns="http://www.w3.org/2000/svg"
-                  version="1.1"
-                  viewBox="0 0 351 301"
-                >
-                  <defs>
-                    <style>
-                      .st0 {
-                        fill: none;
-                        stroke-miterlimit: 10;
-                        stroke-width: 13px;
-                      }
-                    </style>
-                  </defs>
-                  <line class="st0" x1="146.7" y1="150" x2="76" y2="220" />
-                  <line class="st0" x1="276" y1="220" x2="205.3" y2="150" />
-                  <polyline class="st0" points="276 80 176 179 76 80" />
-                  <rect class="st0" x="76" y="80" width="200" height="140" />
-                </svg>
-              </span>
+        </main>
+        <footer class="footer">
+          <div class="footer__inner">
+            <a href="#top" class="footer__topbtn">
+              <span class="footer__topbtn-arrow bent-arrow"></span>
+              <span class="footer__topbtn-str">TOP</span>
             </a>
+            <div class="copyright__wrap">
+              <small
+                ><p class="copyright">
+                  &copy;2024 ozawa kazuki. All Rights Reserved.
+                </p></small
+              >
+            </div>
           </div>
-        </section>
-      </main>
-      <footer class="footer">
-        <div class="footer__inner">
-          <a href="#top" class="footer__topbtn">
-            <span class="footer__topbtn-arrow bent-arrow"></span>
-            <span class="footer__topbtn-str">TOP</span>
-          </a>
-          <div class="copyright__wrap">
-            <small
-              ><p class="copyright">
-                &copy;2024 ozawa kazuki. All Rights Reserved.
-              </p></small
-            >
-          </div>
-        </div>
-      </footer>
-
+        </footer>
+      </div>
+      <div id="mobile-menu__container">
+        <nav class="mobile-menu">
+          <h2 class="mobile-menu__title">
+            <!-- <img class="logo__img" src="images/logo.svg" /> -->
+            <span class="mobile-menu__title-first">Ozawa Kazuki</span>
+            <span class="mobile-menu__title-second">Portfolio</span>
+          </h2>
+          <ul class="mobile-menu__main">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="about.html">
+                <span class="main-title">About</span>
+                <span class="sub-title">わたしについて</span>
+              </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">
+                <span class="main-title">Works </span>
+                <span class="sub-title">制作物</span>
+              </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="#">
+                <span class="main-title">Contact</span>
+                <span class="sub-title">お問合わせ</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      </div>
     </div>
-    <div id="mobile-menu__container"></div>
-  </div>
-    
-</body>
+  </body>
 </html>

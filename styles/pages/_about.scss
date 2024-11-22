@@ -1,4 +1,5 @@
 @use "../globals" as *;
+@use "../parts/common" as *;
 
 .test {
   height: 150vh;
@@ -6,45 +7,104 @@
   margin-top: 0;
 }
 
-.stickyImg {
-  width: 100%;
-  height: auto;
-
-  &-wrap {
-    height: 417px;
-    width: 284px;
+.sticky {
+  &__container {
+    @extend .basic-section;
+    margin-bottom: 0;
     position: sticky;
+    top: 116px;
+
+    @include mq(lg) {
+      top: 200px;
+    }
+  }
+
+  &__img-wrap {
+    height: 323px;
+    width: 220px;
     top: 200px;
     right: 20px;
-    margin-left: auto;
+    background-color: gray;
+    margin: 0 auto;
+
+    @include mq(lg) {
+      margin-right: 0;
+      height: 417px;
+      width: 284px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
+  // &__img {
+
+  // }
 }
 
 .aboutMv {
-  margin-top: -417px;
-  margin-left: -40px;
-  position: relative; 
+  margin-top: -323px;
+  position: relative;
   z-index: -100;
 
-  
-  
-  //   background-color: $cBlue;
-  //   position: relative;
-  
-  @include mq(md) {
+  //!sticky__img-wrapの高さ分
+  @include mq(lg) {
+    margin-top: -417px;
+  }
+
+  &__bg {
+    margin-left: -40px;
+    height: 376px;
+    background-image: url(../images/authorBg.webp);
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+
+    @include mq(md) {
       margin-left: -78px;
-      
+      height: 416px;
     }
     @include mq(lg) {
-        margin-left: -102px;
-        
+      margin-left: -102px;
     }
+  }
+
+  &__intro {
+    @extend .basic-section;
+    margin-top: 104px;
+
+    @include mq(md) {
+      margin-top: 48px;
+    }
+
+    @include mq(lg) {
+      ///!
+      padding-right: 400px;
+      // margin: 0;
+      // width: calc((100% - 1080px) - (284px + 116px))
+    }
+  }
+
+  &__title {
+    & .main-title {
+      color: $cBlack;
+    }
+  }
+}
+
+.skill {
+  background-color: $cGray;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  &__container {
+    @extend .basic-section;
     
-    &__bg {
-        height: 416px;
-        background-image: url(../images/author.webp);
-        background-size: cover;
-        background-position: bottom;
-        filter: blur(20px);
+    @include mq(lg) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      ///!
+      padding-right: 400px;
+    }
   }
 }

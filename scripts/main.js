@@ -11,7 +11,7 @@ class Main {
 
     #init() {
         new MobileMenu;
-        Pace.on('done', this.#scrollInit.bind(this));
+        // Pace.on('done', this.#scrollInit.bind(this));
     }
 
     destroy() {
