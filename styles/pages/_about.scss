@@ -1,12 +1,6 @@
 @use "../globals" as *;
 @use "../parts/common" as *;
 
-.test {
-  height: 150vh;
-  background-color: teal;
-  margin-top: 0;
-}
-
 .sticky {
   &__container {
     @extend .basic-section;
@@ -141,4 +135,30 @@
 
     }
   }
+}
+
+.vision {
+  @extend .basic-section;
+  background-color: teal;
+
+  @include mq(lg) {
+    padding-right: 400px;
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  &__head {
+    height: 90px;
+    background-color: $cBlue;
+    color: $cWhite;
+  }
+
+  &__data {
+    border-bottom: 1px solid $cBlue;
+  }
+
+
+
 }

@@ -621,21 +621,21 @@ body {
   letter-spacing: 0.05rem;
 }
 
-.basic-section, .sticky__container, .aboutMv__intro, .skill__container, .mv__container, .work {
+.basic-section, .sticky__container, .aboutMv__intro, .skill__container, .vision, .mv__container, .work {
   padding-right: 16px;
   padding-left: 16px;
   margin: 0 auto;
   margin-bottom: 96px;
 }
 @media screen and (min-width: 600px) {
-  .basic-section, .sticky__container, .aboutMv__intro, .skill__container, .mv__container, .work {
+  .basic-section, .sticky__container, .aboutMv__intro, .skill__container, .vision, .mv__container, .work {
     padding-right: 8.415vw;
     padding-left: 8.415vw;
     margin-bottom: 130px;
   }
 }
 @media screen and (min-width: 960px) {
-  .basic-section, .sticky__container, .aboutMv__intro, .skill__container, .mv__container, .work {
+  .basic-section, .sticky__container, .aboutMv__intro, .skill__container, .vision, .mv__container, .work {
     padding: 0;
     width: calc(100% - 16.83vw);
     max-width: 1080px;
@@ -1155,6 +1155,7 @@ img {
 
 .table-head {
   display: block;
+  font-size: 14px;
 }
 .table-head::before {
   content: "";
@@ -1647,12 +1648,6 @@ img {
   }
 }
 
-.test {
-  height: 150vh;
-  background-color: teal;
-  margin-top: 0;
-}
-
 .sticky__container {
   position: absolute;
   margin-bottom: 0;
@@ -1764,4 +1759,24 @@ img {
 }
 .skill__table .table-head {
   margin-bottom: 8px;
+}
+
+.vision {
+  background-color: teal;
+}
+@media screen and (min-width: 960px) {
+  .vision {
+    padding-right: 400px;
+  }
+}
+.vision__table {
+  width: 100%;
+}
+.vision__head {
+  height: 90px;
+  background-color: #1565e6;
+  color: #ffffff;
+}
+.vision__data {
+  border-bottom: 1px solid #1565e6;
 }/*# sourceMappingURL=style.css.map */
