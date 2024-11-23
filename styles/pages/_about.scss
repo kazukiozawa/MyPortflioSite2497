@@ -139,26 +139,80 @@
 
 .vision {
   @extend .basic-section;
-  background-color: teal;
-
+  margin-bottom: 0;
+  padding-bottom: 96px;
+  //!! sticky-imgを下までスクロールさせるため
+  
+  @include mq(md) {
+    margin-bottom: 130px;
+  }
   @include mq(lg) {
-    padding-right: 400px;
+    padding-bottom: 200px;
+
   }
 
   &__table {
     width: 100%;
+    border-spacing: 16px 0; /* セル間に10pxの空間を作る */
+    border-collapse: separate;
   }
 
   &__head {
-    height: 90px;
-    background-color: $cBlue;
+    height: 106px;
     color: $cWhite;
+    margin-right: 16px;
+    
+    @include mq(lg){
+      width: 132px;
+    }
+    
+    &-inner {
+      height: 90px;
+      width: 64px;
+      background-color: $cBlue;
+      text-align: start;
+      padding: 4px 4px;
+
+      @include mq(lg) {
+        width: 128px;
+        padding: 4px 8px;
+      }
+
+    }
+
+    &-year {
+      display: inline-block;
+    }
+
+    &-space {
+      display: block;
+      height: 16px;
+    }
+
+    &-pre {
+      font-size: 15px;
+      display: inline-block;
+    }
+    &-heightlight {
+      font-size: 28px;
+      display: inline-block;
+    }
   }
 
   &__data {
-    border-bottom: 1px solid $cBlue;
+    border-top: 2px solid $cBlue;
+    padding-right: 16px;
+    padding-left: 16px;
+
+    &-inner {
+      font-size: 16px;
+      font-weight: 600;
+
+    }
   }
 
-
+  &__row:last-of-type .vision__data {
+    border-bottom: 2px solid $cBlue;
+  }
 
 }
