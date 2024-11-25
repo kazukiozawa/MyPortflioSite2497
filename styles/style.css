@@ -386,7 +386,6 @@
 }
 
 .bg-img-zoom {
-  background-image: url(images/image-1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1742,6 +1741,7 @@ img {
 @media screen and (min-width: 960px) {
   .skill__container {
     padding-top: 32px;
+    padding-bottom: 32px;
     padding-right: 400px;
   }
 }
@@ -1749,6 +1749,9 @@ img {
   border-top: 1px solid;
   padding-top: 24px;
   padding-bottom: 24px;
+}
+.skill__item:last-of-type {
+  border-bottom: 1px solid;
 }
 .skill__txt {
   margin-bottom: 40px;
@@ -1768,7 +1771,7 @@ img {
 }
 @media screen and (min-width: 600px) {
   .vision {
-    margin-bottom: 130px;
+    padding-bottom: 130px;
   }
 }
 @media screen and (min-width: 960px) {
@@ -1823,6 +1826,11 @@ img {
   border-top: 2px solid #1565e6;
   padding-right: 16px;
   padding-left: 16px;
+}
+@media screen and (min-width: 960px) {
+  .vision__data {
+    padding-right: 286px;
+  }
 }
 .vision__data-inner {
   font-size: 16px;
