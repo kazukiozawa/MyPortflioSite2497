@@ -18,17 +18,15 @@ function adjustVisionPadding() {
     const visionSection = document.querySelector('.vision');
 
     if (viewHeight > 1086) {
-        const bottomSpace = viewHeight - 882;
+        const bottomSpace = viewHeight - 874;
         visionSection.style.paddingBottom = `${bottomSpace}px`;
     } else {
-        visionSection.style.paddingBottom = ''; // 初期値に戻す
+        visionSection.style.paddingBottom = ''; 
     }
 }
 
-// 初回実行
 adjustVisionPadding();
 
-// ウィンドウリサイズ時に処理を実行
 window.addEventListener('resize', () => {
     adjustVisionPadding();
 });
