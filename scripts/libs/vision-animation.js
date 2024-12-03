@@ -70,49 +70,46 @@ document.addEventListener("DOMContentLoaded", () => {
   const stickyMiddleOffset = stickyContainer.offsetHeight / 2;
   const stickyTopValue = stickyContainer.getBoundingClientRect().top;
 
-  let scrollPos = 0; // 現在のスクロール位置
-  const scrollSpeed = 0.1; // スクロール速度
-  const target = document.documentElement; // ドキュメント全体を対象にする
-  let isCustomScrollActive = false; // カスタムスクロールの有効化フラグ
-
-  // スクロールイベントをカスタムで制御
-  function enableCustomScroll() {
-    isCustomScrollActive = true;
-    window.addEventListener(
-      "wheel",
-      (event) => {
-        if (!isCustomScrollActive) return; // フラグが有効な場合のみ処理
-        event.preventDefault(); // デフォルトのスクロールを無効化
-        scrollPos += event.deltaY * scrollSpeed; // スクロール速度を調整
-        scrollPos = Math.max(
-          0,
-          Math.min(scrollPos, target.scrollHeight - window.innerHeight)
-        ); // 範囲制御
-      },
-      { passive: false }
-    );
-
-    function smoothScroll() {
-      const currentScroll = window.scrollY;
-      const difference = scrollPos - currentScroll;
-      const move = difference * 0.1; // 滑らかさを調整
-      if (Math.abs(move) > 0.5) {
-        window.scrollBy(0, move);
-      }
-      if (isCustomScrollActive) {
-        requestAnimationFrame(smoothScroll); // アニメーションを継続
-      }
-    }
-
-    requestAnimationFrame(smoothScroll); // スムーズスクロール開始
-  }
-
-  function disableCustomScroll() {
-    isCustomScrollActive = false; // カスタムスクロールを無効化
-  }
-
   const createScrollTrigger = (data, index) => {
     const dataMiddleOffset = data.offsetHeight / 2;
+    
+
+    let isScrollDisabled = false;
+
+    // preventDefault を実行する関数
+    function preventDefaultScroll(event) {
+      event.preventDefault();
+    }
+    
+    // スクロール位置を強制的に固定
+    function lockScrollPosition() {
+      const currentScrollY = window.scrollY;
+      const currentScrollX = window.scrollX;
+    
+      // 繰り返し現在位置に固定
+      const lock = () => {
+        if (isScrollDisabled) {
+          window.scrollTo(currentScrollX, currentScrollY);
+          requestAnimationFrame(lock);
+        }
+      };
+      lock();
+    }
+    
+    // スクロールを無効化する関数
+    function disableScroll() {
+      isScrollDisabled = true;
+    
+      // イベントを無効化
+      window.addEventListener("wheel", preventDefaultScroll, { passive: false });
+      window.addEventListener("touchmove", preventDefaultScroll, { passive: false });
+      window.addEventListener("keydown", preventDefaultScroll, { passive: false });
+    
+      // 慣性を制御
+      lockScrollPosition();
+    }
+
+
 
     // ScrollTrigger設定
     return ScrollTrigger.create({
@@ -132,17 +129,14 @@ document.addEventListener("DOMContentLoaded", () => {
           data.offsetHeight}px`,
       markers: true,
       onEnter: () => {
-        console.log(`Custom scroll enabled for section ${index + 1}`);
-        enableCustomScroll(); // カスタムスクロールを有効化
+        disableScroll();
+        console.log(`OnEnterCustom scroll enabled for section ${index + 1}下から入ってきた！`);
+       
       },
-      onLeave: () => {
-        console.log(`Custom scroll disabled for section ${index + 1}`);
-        disableCustomScroll(); // カスタムスクロールを無効化
-      },
-      onLeaveBack: () => {
-        console.log(`Custom scroll disabled (backwards) for section ${index + 1}`);
-        disableCustomScroll(); // スクロールが戻った際にも無効化
-      },
+     
+      // onLeave: () => console.log("Onleave下へ抜けた！"),
+      onLeaveBack: () => console.log("onLeaceBack上へ戻った！"),
+      // onEnterBack: () => console.log("onEnterback上から戻ってきた！")
     });
   };
 
@@ -150,8 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollTriggers = Array.from(dataElements).map((data, index) =>
     createScrollTrigger(data, index)
   );
-
-  console.log(scrollTriggers);
 
   // リサイズ時にScrollTriggerをリフレッシュ
   const onResize = () => {
