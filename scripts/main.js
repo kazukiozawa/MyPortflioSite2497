@@ -20,12 +20,12 @@ class Main {
 
     #scrollInit() {
         this.#observers.push(
-            new ScrollObserver('#main-content', this.#sideAnimation.bind(this), { once: false, rootMargin: "-300px 0px" }),
-            new ScrollObserver('.nav-trigger', this.#navAnimation.bind(this), { once: false }),
-            new ScrollObserver('.swiper', this.#toggleSlideAnimation.bind(this), { once: false }),
-            new ScrollObserver('.cover-slide', this.#inviewAnimation),
-            new ScrollObserver('.appear', this.#inviewAnimation),
-            new ScrollObserver('.tween-animate-title', this.#textAnimation)
+            // new ScrollObserver('#main-content', this.#sideAnimation.bind(this), { once: false, rootMargin: "-300px 0px" }),
+            // new ScrollObserver('.nav-trigger', this.#navAnimation.bind(this), { once: false }),
+            // new ScrollObserver('.swiper', this.#toggleSlideAnimation.bind(this), { once: false }),
+            // new ScrollObserver('.cover-slide', this.#inviewAnimation),
+            // new ScrollObserver('.appear', this.#inviewAnimation),
+            // new ScrollObserver('.tween-animate-title', this.#textAnimation)
         )
         console.log(this.#observers);
     }
@@ -37,6 +37,8 @@ class Main {
             this.hero.stop();
         }
     }
+
+    
 
     #textAnimation(el, inview) {
         if(inview) {

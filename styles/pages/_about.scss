@@ -96,6 +96,7 @@
   // padding-top: 24px;
   // padding-bottom: 24px;
   margin-bottom: 130px;
+  
 
   @include mq(lg){
     margin-bottom: 200px; 
@@ -205,9 +206,26 @@
   }
 
   &__data {
-    border-top: 2px solid $cBlue;
+    position: relative;
+    // border-top: 2px solid $cBlue;
     padding-right: 16px;
     padding-left: 16px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px; 
+      width: 100%; 
+      background-color: $cBlue;
+      z-index: -10;
+      // border-top: 4px solid #3498db; /* 上のボーダー */
+      // border-right: 4px solid #3498db; /* 右のボーダー */
+      // border-bottom: 4px solid #3498db; /* 下のボーダー */
+      // border-left: 4px solid transparent; /* 左側は透明 */
+    }
 
     @include mq(lg) {
       padding-right: 286px;
@@ -220,8 +238,16 @@
     }
   }
 
-  &__row:last-of-type .vision__data {
-    border-bottom: 2px solid $cBlue;
+  &__row:last-of-type .vision__data::after {
+    // border-bottom: 2px solid $cBlue;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px; 
+    width: 100%; 
+    background-color: $cBlue;
+    z-index: -10;
   }
 
 }

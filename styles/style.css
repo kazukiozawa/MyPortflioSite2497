@@ -1823,9 +1823,20 @@ img {
   display: inline-block;
 }
 .vision__data {
-  border-top: 2px solid #1565e6;
+  position: relative;
   padding-right: 16px;
   padding-left: 16px;
+  overflow: hidden;
+}
+.vision__data::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #1565e6;
+  z-index: -10;
 }
 @media screen and (min-width: 960px) {
   .vision__data {
@@ -1836,6 +1847,13 @@ img {
   font-size: 16px;
   font-weight: 600;
 }
-.vision__row:last-of-type .vision__data {
-  border-bottom: 2px solid #1565e6;
+.vision__row:last-of-type .vision__data::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #1565e6;
+  z-index: -10;
 }/*# sourceMappingURL=style.css.map */
