@@ -19,6 +19,7 @@ class TweenTextAnimation extends TextAnimation {
     constructor(el) {
         super(el);
         this.DOM.chars = this.DOM.el.querySelectorAll('.char');
+        // this.DOM.typeCursor = this.DOM.el.querySelectorAll('.char:after');
     }
     
     animate() {
@@ -33,4 +34,29 @@ class TweenTextAnimation extends TextAnimation {
             });
         });
     }
+    
+    typeAnimate() {
+        // console.log(this.DOM.typeCursor);
+        this.DOM.chars.forEach((c, i) => {
+            gsap.to(c, .1, {
+                delay: i * .05,
+                startAt: { opacity: 0},
+                display: 'inline-block',
+                opacity: 1,
+                onComplete: () => {
+                    if (i === this.DOM.chars.length - 1) {
+                        setTimeout(() => {
+                            this.DOM.el.classList.add('hide-after'); // クラスを追加して非表示制御
+                        }, 700);
+                    }
+                },
+            })
+        })
+    }
 }
+
+// class TestTextAnimation extends TextAnimation {
+//     constructor(el){
+//         this.DOM.chars = this.;
+//     }
+// }

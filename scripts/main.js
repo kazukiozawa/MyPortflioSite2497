@@ -6,12 +6,13 @@ class Main {
         this.header = document.querySelector('.header');
         this.hero = new HeroSlider('.swiper');
         this.sides = document.querySelectorAll('.side');
-        this.#init();
+        // this.#init();
+        this.#scrollInit();
     }
 
     #init() {
         new MobileMenu;
-        // Pace.on('done', this.#scrollInit.bind(this));
+        Pace.on('done', this.#scrollInit.bind(this));
     }
 
     destroy() {
@@ -26,6 +27,7 @@ class Main {
             // new ScrollObserver('.cover-slide', this.#inviewAnimation),
             // new ScrollObserver('.appear', this.#inviewAnimation),
             // new ScrollObserver('.tween-animate-title', this.#textAnimation)
+            new ScrollObserver('.vision__data-inner', this.#testAnimation)
         )
         console.log(this.#observers);
     }
@@ -44,6 +46,13 @@ class Main {
         if(inview) {
             const ta = new TweenTextAnimation(el);
             ta.animate();
+        }
+    }
+    #testAnimation(el, inview) {
+        if(inview) {
+            const ta = new TweenTextAnimation(el);
+            // ta.typeAnimate();
+            ta.typeAnimate();
         }
     }
 

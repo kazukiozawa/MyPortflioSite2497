@@ -1847,6 +1847,25 @@ img {
   font-size: 16px;
   font-weight: 600;
 }
+.vision__data-inner .char {
+  display: none;
+  opacity: 0;
+}
+.vision__data-inner:after {
+  content: "|";
+  animation: typingCursor 0.8s ease infinite;
+}
+.vision__data-inner.hide-after:after {
+  display: none;
+}
+@keyframes typingCursor {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .vision__row:last-of-type .vision__data::after {
   content: "";
   position: absolute;
