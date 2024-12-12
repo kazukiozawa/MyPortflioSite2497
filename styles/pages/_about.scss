@@ -24,6 +24,7 @@
     right: 20px;
     background-color: gray;
     margin: 0 auto;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
 
     @include mq(lg) {
       margin-right: 0;
@@ -106,6 +107,8 @@
   &__container {
     @extend .basic-section;
     margin-bottom: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
     
     @include mq(lg) {
       padding-top: 32px;
@@ -163,6 +166,14 @@
     border-collapse: separate;
   }
 
+  &__row {
+    opacity: 0;
+
+    &.inview {
+      opacity: 1;
+    }
+  }
+
   &__head {
     height: 106px;
     color: $cWhite;
@@ -186,20 +197,22 @@
 
     }
 
-    &-year {
-      display: inline-block;
-    }
-
+    
     &-space {
       display: block;
       height: 16px;
     }
+    
+  }
+  &__year {
+    display: inline-block;
+    overflow: hidden;
 
     &-pre {
       font-size: 15px;
       display: inline-block;
     }
-    &-heightlight {
+    &-highlight {
       font-size: 28px;
       display: inline-block;
     }
@@ -211,8 +224,9 @@
     padding-right: 16px;
     padding-left: 16px;
     overflow: hidden;
+    width: 100%;
 
-    &::before {
+    & .vision__border {
       content: "";
       position: absolute;
       top: 0;
@@ -221,10 +235,7 @@
       width: 100%; 
       background-color: $cBlue;
       z-index: -10;
-      // border-top: 4px solid #3498db; /* 上のボーダー */
-      // border-right: 4px solid #3498db; /* 右のボーダー */
-      // border-bottom: 4px solid #3498db; /* 下のボーダー */
-      // border-left: 4px solid transparent; /* 左側は透明 */
+      transform-origin: left center; // 左から始めるように設定
     }
 
     @include mq(lg) {
@@ -242,10 +253,11 @@
       &:after {
         content: "|";
         animation: typingCursor .8s ease infinite;
+        display: none
       }
 
-      &.hide-after:after {
-        display: none; // 非表示状態
+      &.appear:after {
+        display: inline-block; // 非表示状態
     }
       
       @keyframes typingCursor {
@@ -260,7 +272,7 @@
     }
   }
 
-  &__row:last-of-type .vision__data::after {
+  &__row:last-of-type .vision__border-bottom {
     // border-bottom: 2px solid $cBlue;
     content: "";
     position: absolute;

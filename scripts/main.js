@@ -6,8 +6,8 @@ class Main {
         this.header = document.querySelector('.header');
         this.hero = new HeroSlider('.swiper');
         this.sides = document.querySelectorAll('.side');
-        // this.#init();
-        this.#scrollInit();
+        this.#init();
+        // this.#scrollInit();
     }
 
     #init() {
@@ -27,9 +27,9 @@ class Main {
             // new ScrollObserver('.cover-slide', this.#inviewAnimation),
             // new ScrollObserver('.appear', this.#inviewAnimation),
             // new ScrollObserver('.tween-animate-title', this.#textAnimation)
-            new ScrollObserver('.vision__data-inner', this.#testAnimation)
+            // new ScrollObserver('.vision__data-inner', this.#testAnimation)
+            new ScrollObserver('.vision__row', this.#visionAnimation, {rootMargin: "-10%"})
         )
-        console.log(this.#observers);
     }
 
     #toggleSlideAnimation(el, inview) {
@@ -53,6 +53,14 @@ class Main {
             const ta = new TweenTextAnimation(el);
             // ta.typeAnimate();
             ta.typeAnimate();
+        }
+    }
+    #visionAnimation(el, inview) {
+        if(inview) {
+             const va = new TestTextAnimation(el);
+            // ta.typeAnimate();
+            // ta.typeAnimate();
+            va.animate();
         }
     }
 

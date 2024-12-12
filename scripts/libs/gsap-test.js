@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isOpen = false;
   
     menuBtn.addEventListener('click', () => {
+      console.log('on');
       if (!isOpen) {
         gsap.to(spans[0], { y: 3, rotation: 45, duration: 0.4 });
         gsap.to(spans[1], { opacity: 0, duration: 0.4 });
