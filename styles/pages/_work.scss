@@ -2,13 +2,14 @@
 @use "../parts/common" as *;
 
 .workMv {
+  // margin-top: -323px;
   position: relative;
   z-index: -100;
 
-  //!sticky__img-wrapの高さ分
-  @include mq(lg) {
-    margin-top: -417px;
-  }
+  // //!sticky__img-wrapの高さ分
+  // @include mq(lg) {
+  //   // margin-top: -417px;
+  // }
 
   &__bg {
     margin-left: -40px;
@@ -22,8 +23,8 @@
       margin-left: -78px;
     }
     @include mq(lg) {
-        margin-left: -102px;
-        height: 416px;
+      height: 416px;
+      margin-left: -102px;
     }
   }
 
@@ -32,10 +33,11 @@
     margin-top: 104px;
 
     @include mq(md) {
-      margin-top: 48px;
+      margin-top: 168px;
     }
-
+    
     @include mq(lg) {
+      // margin-top: 168px;
       ///!
       padding-right: 400px;
       // margin: 0;
@@ -50,21 +52,38 @@
   }
 }
 
-.sticky {
+.stickyWork {
+
+  &__container {
+    @include mq(lg) {
+      position: absolute;
+      top: 216px;
+      width: 100%;
+      max-width: none;
+    }
+
+  }
 
   &__img-wrap {
     width: calc(100% - 32px);
+    max-width: 308px;
     height: auto;
     box-shadow: none;
 
+
+    @include mq(md) {
+      max-width: 416px;
+    }
+
     @include mq(lg) {
-      width: 584px;
+      max-width: 584px;
+      margin-right: auto;
     }
   }
 }
 
 
-.pageTitle {
+.pageTitleWork{
     text-align: end;
 
 

@@ -106,7 +106,6 @@ img {
     margin-bottom: 0;
     top: 116px;
     width: 100%;
-
     
     @include mq(lg) {
       position: sticky;
@@ -116,8 +115,8 @@ img {
   }
 
   &__img-wrap {
-    height: 323px;
     width: 220px;
+    height: 323px;
     top: 200px;
     right: 20px;
     margin: 0 auto;
@@ -608,6 +607,20 @@ img {
   &.language {
     background-color: $cBlack;
     color: $cWhite;
+  }
+
+}
+
+.style-work {
+  display: inline-block;
+  padding: 2px 4px 2px;
+  background-color: $cBlue;
+  color: $cWhite;
+  font-size: 14px;
+  margin-right: 8px;
+
+  @include mq(lg) {
+    margin-right: 16px;
   }
 
 }

@@ -82,6 +82,10 @@
   &__title {
     display: inline-block;
 
+    & p {
+      letter-spacing: 0;
+    }
+
     &-first {
       font-size: 6.4vw;
       // font-size: (6.4vw, 10px);
@@ -134,9 +138,17 @@
     @extend .font-md;
     font-weight: 600;
     margin-top: 2.884vh;
-
+    
     @include mq(lg){
-      margin-top: 0;
+      width: min(100%, 392px);
+      // max-width: 402px;
+      margin-top: 40px;
+    }
+
+    & .catch {
+      @include mq(lg) {
+        font-size: 18px;
+      }
     }
   }
 
@@ -472,20 +484,6 @@
     @include mq(md){
       height: auto;
     }
-  }
-
-  &__style {
-    display: inline-block;
-    padding: 2px 4px 2px;
-    background-color: $cBlue;
-    color: $cWhite;
-    font-size: 14px;
-    margin-right: 8px;
-
-    @include mq(lg) {
-      margin-right: 16px;
-    }
-  
   }
 
   &__date {
