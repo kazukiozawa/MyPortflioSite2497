@@ -4,7 +4,7 @@ class Main {
 
     constructor() {
         this.header = document.querySelector('.header');
-        this.hero = new HeroSlider('.swiper');
+        // this.hero = new HeroSlider('.swiper');
         this.sides = document.querySelectorAll('.side');
         this.#init();
         // this.#scrollInit();

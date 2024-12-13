@@ -1,0 +1,77 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+
+.workMv {
+  position: relative;
+  z-index: -100;
+
+  //!sticky__img-wrapの高さ分
+  @include mq(lg) {
+    margin-top: -417px;
+  }
+
+  &__bg {
+    margin-left: -40px;
+    height: 222px;
+    background-image: url(../../images/cafeMv.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+
+    @include mq(md) {
+      margin-left: -78px;
+    }
+    @include mq(lg) {
+        margin-left: -102px;
+        height: 416px;
+    }
+  }
+
+  &__intro {
+    @extend .basic-section;
+    margin-top: 104px;
+
+    @include mq(md) {
+      margin-top: 48px;
+    }
+
+    @include mq(lg) {
+      ///!
+      padding-right: 400px;
+      // margin: 0;
+      // width: calc((100% - 1080px) - (284px + 116px))
+    }
+  }
+
+  &__title {
+    & .main-title {
+      color: $cBlack;
+    }
+  }
+}
+
+.sticky {
+
+  &__img-wrap {
+    width: calc(100% - 32px);
+    height: auto;
+    box-shadow: none;
+
+    @include mq(lg) {
+      width: 584px;
+    }
+  }
+}
+
+
+.pageTitle {
+    text-align: end;
+
+
+    &__container {
+        padding-right: 8.415vw;
+        width: 100%;
+
+    }
+}
+

@@ -99,6 +99,44 @@ img {
   }
 }
 
+.sticky {
+  &__container {
+    @extend .basic-section;
+    position: absolute;
+    margin-bottom: 0;
+    top: 116px;
+    width: 100%;
+
+    
+    @include mq(lg) {
+      position: sticky;
+      top: 200px;
+      width: calc(100% - 16.83vw);
+    }
+  }
+
+  &__img-wrap {
+    height: 323px;
+    width: 220px;
+    top: 200px;
+    right: 20px;
+    margin: 0 auto;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+
+    @include mq(lg) {
+      margin-right: 0;
+      height: 417px;
+      width: 284px;
+      
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
 // font
 .font-sm {
   font-size: 14px;
