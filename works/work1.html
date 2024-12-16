@@ -35,7 +35,7 @@
     
     <script src="../scripts/main.js" defer></script>
   </head>
-  <body>
+  <body>  
     <div id="global-container">
       <div id="container">
         <header class="header">
@@ -48,7 +48,7 @@
             <nav class="header__nav">
               <ul class="header__ul">
                 <li class="header__li">
-                  <a href="#" class="header__link">ABOUT</a>
+                  <a href="../about.html" class="header__link">ABOUT</a>
                 </li>
                 <li class="header__li">
                   <a href="#" class="header__link">WORKS</a>
@@ -69,28 +69,53 @@
           </div>
         </header>
         <main class="main">
-          <div class="sticky__area stickyWork__area">
-            <div class="sticky__container stickyWork__container">
-              <div class="sticky__img-wrap stickyWork__img-wrap">
+          <div class="sticky__area sticky__area-work">
+            <div class="sticky__container sticky__container-work">
+              <div class="sticky__img-wrap sticky__img-wrap-work">
                 <img src="../images/cafaMockup.webp" alt="本人" class="stickyImg" />
               </div>
             </div>
-            <div class=" pageTitle__container pageTitleWork__container">
-                <h2 class="pageTitle pageTitleWork">WORK 01</h2>
+            <div class=" pageTitle__container pageTitle__container-work">
+                <h2 class="pageTitle pageTitle-work">WORK 01</h2>
             </div>
             <section class="workMv">
               <div class="workMv__container">
                 <div class="workMv__bg"></div>
                 <div class="workMv__intro">
-                  <span class="style-work">website</span>
+                  <span class="work-style work-style-work">website</span>
 
                     <h2 class="workMv__title">
                         <p class="main-title">フレンチレストランの架空Webサイト</p>
                         <p class="sub-title">A fictitious website for a French restaurant</p>
                     </h2>
-                    <p class="workMv__txt">1998年熊本県生まれ、愛知県育ち。
-                        デザインや開発の専門知識に加え、マネジメントやマーケティング戦略なども幅広く学びながら仕事に取り組み、Web業界でクリエイティブディレクターを目指していきたいです。クライアントの期待を超えるクリエイティブなデザインで、ターゲットの心を動かし確実な成果を上げることを目標としています。</p>
+                    <div class="workMv__flex-wrap">
+                      <p class="workMv__txt">以前に自身が働いていたレストランから許可をもらい架空サイトを制作しました。お店はオーガニック食品、新鮮な食材を扱うフレンチイタリアンのレストランです。周辺に日本人が多く住んでいることと、フランスで日本人向けの雑誌にお店が掲載されて日本人観光客も訪れることから、需要が高く、集客効果が期待できることから、今回日本人向けのサイトとして設定し制作しました。</p>
+                      <table class="workMv__detail-table">
+                        <tr class="workMv__detail-item">
+                          <th class="table-head">URL</th>
+                          <td class="table-data"><a class="table-data__link" href="https://ozawakazuki.com/aerial/caferestaurant">https://ozawakazuki.com/aerial/caferestaurant</a></td>
+                        </tr>
+                        <tr class="workMv__detail-item">
+                          <th class="table-head">制作期間</th>
+                          <td class="table-data">企画・WF: 2日/ デザイン：3日/ コーディング：10日</td>
+                        </tr>
+                        <tr class="workMv__detail-item">
+                          <th class="table-head">使用スキル</th>
+                          <td class="table-data">HTML /CSS /Scss /Javascript /Illustrator /Photoshop /Figma</td>
+                        </tr>
+                      </table>
+
+                    </div>
+
                 </div>
+              </div>
+            </section>
+            <section class="workInfo">
+              <div class="detail">
+                <h3 class="detail-title">
+                  <p class="bold-title">Design Approach</p>
+                  <p class="boldSub-title">デザイン設計のアプローチ</p>
+                </h3>
               </div>
             </section>
           </div>

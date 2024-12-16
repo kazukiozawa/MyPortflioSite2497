@@ -4,7 +4,8 @@
 .workMv {
   // margin-top: -323px;
   position: relative;
-  z-index: -100;
+  // z-index: -100;
+  //! for sticky container;
 
   // //!sticky__img-wrapの高さ分
   // @include mq(lg) {
@@ -35,41 +36,102 @@
     @include mq(md) {
       margin-top: 168px;
     }
-    
+
     @include mq(lg) {
       // margin-top: 168px;
       ///!
-      padding-right: 400px;
-      // margin: 0;
-      // width: calc((100% - 1080px) - (284px + 116px))
     }
   }
 
   &__title {
+    margin-top: 8px;
+
+    @include mq(lg) {
+      margin-top: 16px;
+    }
     & .main-title {
+      font-size: 23px;
+      font-weight: 400;
       color: $cBlack;
+
+      @include mq(lg) {
+        font-size: 36px;
+      }
+    }
+    // & .sub-title {
+    //   color: $cBlack;
+    // }
+  }
+
+  &__flex-wrap {
+    display: flex;
+    flex-direction: column;
+
+    @include mq(lg) {
+      flex-direction: column-reverse;
+    }
+
+  }
+
+  &__txt {
+    padding-right: 16px;
+    padding-left: 16px;
+    margin: 0 auto;
+    margin-bottom: 64px;
+    max-width: 778px;
+
+    @include mq(lg) {
+      margin-bottom: 0;
     }
   }
+
+  &__detail-table {
+    @include mq(lg){
+      margin-bottom: 64px;
+    }
+  }
+
+  &__detail-item {
+    padding-bottom: 16px;
+    display: block;
+
+    & .table-head {
+      text-align: start;
+      width: 104px;
+      @include mq(lg) {
+        display: table-cell;
+      }
+    }
+
+    & .table-data {
+      font-weight: 500;
+
+      &__link {
+        color: $cBlue;
+        text-decoration: underline;
+        word-break: break-all;
+      }
+    }
+  }
+
+
 }
 
-.stickyWork {
-
-  &__container {
+.sticky {
+  &__container-work {
     @include mq(lg) {
       position: absolute;
       top: 216px;
       width: 100%;
       max-width: none;
     }
-
   }
 
-  &__img-wrap {
+  &__img-wrap-work {
     width: calc(100% - 32px);
     max-width: 308px;
     height: auto;
     box-shadow: none;
-
 
     @include mq(md) {
       max-width: 416px;
@@ -82,15 +144,32 @@
   }
 }
 
-
-.pageTitleWork{
+.pageTitle {
+  &-work {
     text-align: end;
+  }
 
+  &__container-work {
+    padding-right: 16px;
+    width: 100%;
 
-    &__container {
-        padding-right: 8.415vw;
-        width: 100%;
-
+    @include mq(md) {
+      padding-right: 8.415vw;
     }
+    @include mq(xl) {
+      padding-right: calc((100% - 1080px) / 2);
+    }
+  }
 }
 
+.work-style {
+  &-work {
+    @include mq(lg) {
+      padding: 5.5px 10px 5.5px;
+    }
+  }
+}
+
+.detail {
+  @extend .basic-section;
+}
