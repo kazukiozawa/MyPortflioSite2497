@@ -70,7 +70,6 @@
     @include mq(lg) {
       flex-direction: column-reverse;
     }
-
   }
 
   &__txt {
@@ -86,7 +85,7 @@
   }
 
   &__detail-table {
-    @include mq(lg){
+    @include mq(lg) {
       margin-bottom: 64px;
     }
   }
@@ -113,8 +112,6 @@
       }
     }
   }
-
-
 }
 
 .sticky {
@@ -170,6 +167,82 @@
   }
 }
 
-.detail {
+.descript {
   @extend .basic-section;
+  @include mq(lg){
+    margin-bottom: 112px;   
+  }
+  
+  font-size: 14px;
+
+  &__title {
+    & .boldSub-title {
+        @include mq(lg) {
+            margin-bottom: 40px;
+        }
+    }
+  }
+
+  &__container {
+    border-top: 1px solid;
+    padding-top: 24px;
+  }
+  &__list {
+      max-width: 778px;
+      margin: 0 auto;
+    }
+    
+    &__item {
+        margin-bottom: 48px;
+
+        @include mq(lg){
+            display: flex;
+        }
+    }
+    
+    &__head {
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 24px;
+        @include mq(lg){
+            width: 120px;
+            flex-shrink: 0;
+        }
+    }
+    
+    &__data {
+      padding-right: 16px;
+      padding-left: 16px;
+      line-height: 1.7;
+
+      @include mq(lg){
+        padding: 0;
+      }
+
+      & p {
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin: 0;
+        }
+      }
+
+  }
+}
+
+.material {
+  @extend .basic-section;
+
+  &__container {
+    border-top: 1px solid;
+    padding-top: 24px;
+  }
+
+  &__title {
+    & .boldSub-title {
+        @include mq(lg) {
+            margin-bottom: 40px;
+        }
+    }
+  }
 }

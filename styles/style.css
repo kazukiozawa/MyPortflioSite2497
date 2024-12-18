@@ -621,21 +621,21 @@ body {
   letter-spacing: 0.05rem;
 }
 
-.basic-section, .workMv__intro, .detail, .aboutMv__intro, .skill__container, .vision, .mv__container, .work, .sticky__container {
+.basic-section, .workMv__intro, .descript, .material, .aboutMv__intro, .skill__container, .vision, .mv__container, .work, .sticky__container {
   padding-right: 16px;
   padding-left: 16px;
   margin: 0 auto;
   margin-bottom: 96px;
 }
 @media screen and (min-width: 600px) {
-  .basic-section, .workMv__intro, .detail, .aboutMv__intro, .skill__container, .vision, .mv__container, .work, .sticky__container {
+  .basic-section, .workMv__intro, .descript, .material, .aboutMv__intro, .skill__container, .vision, .mv__container, .work, .sticky__container {
     padding-right: 8.415vw;
     padding-left: 8.415vw;
     margin-bottom: 130px;
   }
 }
 @media screen and (min-width: 960px) {
-  .basic-section, .workMv__intro, .detail, .aboutMv__intro, .skill__container, .vision, .mv__container, .work, .sticky__container {
+  .basic-section, .workMv__intro, .descript, .material, .aboutMv__intro, .skill__container, .vision, .mv__container, .work, .sticky__container {
     padding: 0;
     width: calc(100% - 16.83vw);
     max-width: 1080px;
@@ -656,7 +656,7 @@ a {
 
 p {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.7;
   letter-spacing: 0.05em;
 }
 
@@ -1795,6 +1795,9 @@ img {
 .skill__table .table-head {
   margin-bottom: 8px;
 }
+.skill__table .table-head {
+  display: block;
+}
 
 .vision {
   margin-bottom: 0;
@@ -2061,5 +2064,72 @@ img {
 @media screen and (min-width: 960px) {
   .work-style-work {
     padding: 5.5px 10px 5.5px;
+  }
+}
+
+.descript {
+  font-size: 14px;
+}
+@media screen and (min-width: 960px) {
+  .descript {
+    margin-bottom: 112px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .descript__title .boldSub-title {
+    margin-bottom: 40px;
+  }
+}
+.descript__container {
+  border-top: 1px solid;
+  padding-top: 24px;
+}
+.descript__list {
+  max-width: 778px;
+  margin: 0 auto;
+}
+.descript__item {
+  margin-bottom: 48px;
+}
+@media screen and (min-width: 960px) {
+  .descript__item {
+    display: flex;
+  }
+}
+.descript__head {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 960px) {
+  .descript__head {
+    width: 120px;
+    flex-shrink: 0;
+  }
+}
+.descript__data {
+  padding-right: 16px;
+  padding-left: 16px;
+  line-height: 1.7;
+}
+@media screen and (min-width: 960px) {
+  .descript__data {
+    padding: 0;
+  }
+}
+.descript__data p {
+  margin-bottom: 16px;
+}
+.descript__data p:last-child {
+  margin: 0;
+}
+
+.material__container {
+  border-top: 1px solid;
+  padding-top: 24px;
+}
+@media screen and (min-width: 960px) {
+  .material__title .boldSub-title {
+    margin-bottom: 40px;
   }
 }/*# sourceMappingURL=style.css.map */
