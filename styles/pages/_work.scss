@@ -245,4 +245,15 @@
         }
     }
   }
+
+  &__swiper {
+    width: 100%;
+    overflow-x: hidden;
+    height: 248px;
+
+    @include mq(lg) {
+        height: 420px;
+    }
+  }
 }
+

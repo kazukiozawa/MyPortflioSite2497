@@ -68,8 +68,6 @@
 
 .skill {
   background-color: $cGray;
-  // padding-top: 24px;
-  // padding-bottom: 24px;
   margin-bottom: 130px;
   
 
@@ -118,7 +116,7 @@
 
     }
 
-    & .table-head {
+    & .table-data {
       display: block;
     }
   }
@@ -189,10 +187,12 @@
     &-pre {
       font-size: 15px;
       display: inline-block;
+      color: $cWhite;
     }
     &-highlight {
       font-size: 28px;
       display: inline-block;
+      color: $cWhite;
     }
   }
 

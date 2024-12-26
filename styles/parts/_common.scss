@@ -27,15 +27,15 @@ body {
   }
 }
 
-section + section {
-  @include mq(lg) {
-    margin-top: 216px;
-  }
-}
+// section + section {
+//   @include mq(lg) {
+//     margin-top: 216px;
+//   }
+// }
 
 a {
   text-decoration: none;
-  color: $cBBlack;
+  color: $cBlack;
 }
 
 p {
@@ -43,6 +43,10 @@ p {
   line-height: 1.7;
   letter-spacing: 0.05em;
 
+}
+
+h1,h2,h3,h4,h5,span {
+  color: $cBlack;
 }
 
 img {
@@ -620,7 +624,7 @@ img {
 
 }
 
-.work-style {
+.work-category {
   display: inline-block;
   padding: 2px 4px 2px;
   background-color: $cBlue;
@@ -632,4 +636,59 @@ img {
     margin-right: 16px;
   }
 
+}
+
+.others {
+  background-color: $cGray;
+
+  &__container {
+    @extend .basic-section;
+    margin-bottom: 0;
+    padding-top: 24px;
+    padding-bottom: 96px;
+
+    @include mq(md) {
+      padding-bottom: 130px;
+    }
+    
+    @include mq(lg) {
+      padding-top: 32px;
+      padding-bottom: 200px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    // flex-direction: column;
+    gap: 16px;
+
+    @include mq(sm){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mq(md){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include mq(xl){
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    @include mq(sm) {
+      // max-width: 308px;
+  
+    }
+  }
+  &__img {
+    
+    &-wrap {
+      aspect-ratio: 3 / 2;
+      width: 100%;
+      background-color: gray;
+
+
+    }
+
+  }
 }
