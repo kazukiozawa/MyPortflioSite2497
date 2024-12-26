@@ -680,15 +680,25 @@ img {
   
     }
   }
+  &__thum {
+    aspect-ratio: 3 / 2;
+    width: 100%;
+    background-color: gray;
+
+
+  }
   &__img {
+    width: 100%;
     
-    &-wrap {
-      aspect-ratio: 3 / 2;
-      width: 100%;
-      background-color: gray;
 
+  }
 
-    }
+  &__category {
+    font-size: 12px;
+  }
 
+  &__name {
+    font-size: 14px;
+    font-weight: 400;
   }
 }

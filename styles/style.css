@@ -1256,10 +1256,20 @@ img {
 .others__item {
   width: 100%;
 }
-.others__img-wrap {
+.others__thum {
   aspect-ratio: 3/2;
   width: 100%;
   background-color: gray;
+}
+.others__img {
+  width: 100%;
+}
+.others__category {
+  font-size: 12px;
+}
+.others__name {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .mv {
