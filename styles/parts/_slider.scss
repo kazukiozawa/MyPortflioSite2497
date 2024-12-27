@@ -135,7 +135,7 @@
     width: 160px;
 
     @include mq(lg){
-      width: 320px;
+      width: 240px;
 
     }
 
@@ -146,15 +146,13 @@
   }
   
   &-img-wrap {
-    width: 160px; /* 画像の幅 */
-    height: 160px; /* 画像の高さ */
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    width: 160px; 
+    height: 160px;
+    margin-bottom: 4px; 
   
     @include mq(lg){
-      width: 320px;
-      height: 320px;
+      width: 240px;
+      height: 240px;
     }
     
     background-color: gray;
@@ -162,7 +160,6 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* 画像が枠を超えないように */
 
     & img {
       object-fit: cover;
