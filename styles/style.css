@@ -2085,6 +2085,17 @@ img {
 .pageTitle-work {
   text-align: end;
 }
+.pageTitle-maxIndex {
+  display: none;
+  font-size: 48px;
+  color: #ffffff;
+  margin-left: 16px;
+}
+@media screen and (min-width: 960px) {
+  .pageTitle-maxIndex {
+    display: inline-block;
+  }
+}
 .pageTitle__container-work {
   padding-right: 16px;
   width: 100%;
@@ -2120,7 +2131,7 @@ img {
   }
 }
 .descript__container {
-  border-top: 1px solid;
+  border-top: 1px solid #00040c;
   padding-top: 24px;
 }
 .descript__list {
@@ -2164,7 +2175,7 @@ img {
 }
 
 .material__container {
-  border-top: 1px solid;
+  border-top: 1px solid #00040c;
   padding-top: 24px;
 }
 @media screen and (min-width: 960px) {

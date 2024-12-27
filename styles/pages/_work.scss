@@ -146,6 +146,17 @@
     text-align: end;
   }
 
+  &-maxIndex {
+    display: none;
+    font-size: 48px;
+    color: $cWhite;
+    margin-left: 16px;
+
+    @include mq(lg) {
+      display: inline-block;
+    }
+  }
+
   &__container-work {
     padding-right: 16px;
     width: 100%;
@@ -184,7 +195,7 @@
   }
 
   &__container {
-    border-top: 1px solid;
+    border-top: 1px solid $cBlack; 
     padding-top: 24px;
   }
   &__list {
@@ -234,7 +245,7 @@
   @extend .basic-section;
 
   &__container {
-    border-top: 1px solid;
+    border-top: 1px solid $cBlack; 
     padding-top: 24px;
   }
 
