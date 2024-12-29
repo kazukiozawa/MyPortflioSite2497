@@ -1748,7 +1748,6 @@ img {
 
 .aboutMv {
   position: relative;
-  z-index: -100;
 }
 @media screen and (min-width: 960px) {
   .aboutMv {
@@ -2191,5 +2190,41 @@ img {
 @media screen and (min-width: 960px) {
   .material__swiper {
     height: 340px;
+  }
+}
+
+.sticky__img-wrap-workEx {
+  max-width: 336px;
+  height: auto;
+  width: 100%;
+  aspect-ratio: 336/280;
+}
+@media screen and (min-width: 960px) {
+  .sticky__img-wrap-workEx {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .workMv-stickyMargin {
+    margin-top: -336px;
+  }
+}
+.workMv__introEx {
+  margin-top: 214px;
+}
+@media screen and (min-width: 960px) {
+  .workMv__introEx {
+    margin-top: 64px;
+    padding-left: 400px;
+  }
+}
+.workMv__bg4 {
+  background-image: url(../images/bannerJob.png);
+}
+
+@media screen and (min-width: 960px) {
+  .descript-Ex {
+    padding-left: 400px;
   }
 }/*# sourceMappingURL=style.css.map */

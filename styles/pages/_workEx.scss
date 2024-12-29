@@ -1,0 +1,55 @@
+@use "../globals" as *;
+
+.sticky {
+  &__area-workEx {
+  }
+
+  &__img-wrap-workEx {
+    max-width: 336px;
+    height: auto;
+    width: 100%;
+    aspect-ratio: 336 / 280;
+
+    @include mq(lg) {
+      margin-left: 0;
+    }
+  }
+}
+
+.workMv {
+//   z-index: 100;
+  //!
+  &-stickyMargin {
+    @include mq(lg) {
+      margin-top: -336px;
+    }
+  }
+
+  &__introEx {
+    margin-top: calc(436px - 222px);
+    //バナーの縦サイズ280px
+    //top200px
+    //背景画像の高さ222px
+
+    @include mq(lg) {
+      margin-top: 64px;
+      padding-left: 400px;
+    }
+  }
+
+  &__containerEx {
+    // margin-left: 400px;
+  }
+
+  &__bg4 {
+    background-image: url(../images/bannerJob.png);
+  }
+}
+
+.descript {
+  &-Ex {
+    @include mq(lg) {
+      padding-left: 400px;
+    }
+  }
+}

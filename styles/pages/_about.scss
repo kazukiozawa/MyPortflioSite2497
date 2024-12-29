@@ -19,7 +19,8 @@
 .aboutMv {
   // margin-top: -323px;
   position: relative;
-  z-index: -100;
+  // z-index: -100;
+  //!
 
   //!sticky__img-wrapの高さ分
   @include mq(lg) {
