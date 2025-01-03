@@ -17,6 +17,11 @@ $cMenuOpen: $cBlue;
   display: none;
   // transform: scale(0);
 
+  @include mq(md) {
+    padding-right: 8.415vw;
+    padding-left: 8.415vw;
+  }
+
   .main-title,
   .sub-title {
     color: $cWhite;
@@ -25,15 +30,14 @@ $cMenuOpen: $cBlue;
 }
 
 .mobile-menu {
-  &__title {
-
-    &-second {
-      display: block;
-      line-height: 1;
-
-    }
-
+  .top-title {
     margin-bottom: 5vh;
+
+    &-first,
+    &-second,
+    &-third {
+    color: $cWhite; 
+  }
   }
 
   &__btn {
