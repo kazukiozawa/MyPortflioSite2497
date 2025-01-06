@@ -3,7 +3,6 @@
 
 .mv {
   position: relative;
-
   height: 94vh;
   
   @include mq(lg) {
@@ -276,9 +275,7 @@
     & .main-title {
       color: $cBlack;
     }
-    // & .sub-title {
 
-    // }
   }
 
   &__body {

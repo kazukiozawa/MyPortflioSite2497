@@ -1308,11 +1308,16 @@ img {
   font-size: 13.33vw;
   color: #00040c;
   line-height: 0.9;
+  overflow: hidden;
 }
 @media screen and (min-width: 600px) {
   .top-title-second {
     font-size: min(10vw, 128px);
   }
+}
+.top-title-second .char {
+  opacity: 0;
+  display: inline-block;
 }
 .top-title-third {
   font-size: 6.4vw;

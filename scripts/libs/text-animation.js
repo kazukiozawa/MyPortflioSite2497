@@ -43,7 +43,7 @@ class TweenTextAnimation extends TextAnimation {
             gsap.to(c, .1, {
                 delay: i * .05,
                 startAt: { opacity: 0},
-                display: 'inline-block',
+                display: 'inline-block' ,
                 opacity: 1,
                 onComplete: () => {
                     if (i === this.DOM.chars.length - 1) {

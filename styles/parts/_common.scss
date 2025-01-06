@@ -735,10 +735,24 @@ img {
     // font-size: clamp(10px, 13.33vw, 128px);
     color: $cBlack;
     line-height: 0.9;
+    overflow: hidden;
 
     @include mq(md) {
       font-size: min(10vw, 128px);
     }
+
+    & .char { 
+      opacity: 0;
+      display: inline-block;
+      // display: none;
+    }
+
+    // &.start {
+    //   & .char { 
+    //   }
+      
+    // }
+
   }
 
   &-third {
