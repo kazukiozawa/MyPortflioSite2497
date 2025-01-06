@@ -401,7 +401,7 @@
 }
 
 .mobile-menu .top-title {
-  margin-bottom: 5vh;
+  margin-bottom: 9vh;
 }
 .mobile-menu .top-title-first, .mobile-menu .top-title-second, .mobile-menu .top-title-third {
   color: #ffffff;
@@ -446,6 +446,9 @@
 }
 .mobile-menu__item {
   margin-bottom: 1vh;
+}
+.mobile-menu__link {
+  display: block;
 }
 
 .menu-open #mobile-menu__container {
@@ -852,7 +855,7 @@ img {
 }
 
 .main {
-  width: calc(100% - 40px);
+  width: calc(100% - 39px);
   margin-left: 40px;
 }
 @media screen and (min-width: 600px) {
@@ -1932,8 +1935,13 @@ img {
   }
 }
 .vision__data-inner {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
+}
+@media screen and (min-width: 600px) {
+  .vision__data-inner {
+    font-size: 16px;
+  }
 }
 .vision__data-inner .char {
   display: none;
