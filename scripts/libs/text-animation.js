@@ -83,7 +83,7 @@ class TestTextAnimation  {
     }
 
     animate () {
-        const timeline = gsap.timeline(); // タイムラインを作成
+        const timeline = gsap.timeline(); 
         this.DOM.el.classList.add('inview');
         
         timeline.fromTo(this.DOM.head, .9,
@@ -218,9 +218,6 @@ class TestTextAnimation  {
                             });
                         });
 
-                    }
-                    console.log(this.DOM.chars);
-                   
-        
+                    }ｓ
     }
 }
