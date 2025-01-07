@@ -28,7 +28,7 @@ class TweenTextAnimation extends TextAnimation {
         this.DOM.el.classList.add('inview');
         this.DOM.chars.forEach((c, i) => {
             gsap.to(c, .6, {
-                ease: Back.easeOut,
+                ease: 'power3.out',
                 delay: i * .05,
                 startAt: { y: '-50%', opacity: 0},
                 y: '0%',

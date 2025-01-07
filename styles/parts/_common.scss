@@ -45,7 +45,7 @@ p {
 
 }
 
-h1,h2,h3,h4,h5,span {
+h1,h2,h3,h4,h5 {
   color: $cBlack;
 }
 
@@ -179,12 +179,25 @@ img {
   line-height: 1.2;
   color: $cBlue;
   font-weight: 500;
+  opacity: 0;
+
+  &.inview {
+    //  display: inline-block;
+     opacity: 1;
+     & .char {
+       display: inline-block;
+      }
+    }
+    & .char {
+      opacity: 0;
+    }
 
   @include mq(lg) {
     font-size: 48px;
   }
   // margin-bottom: 0;
   // display: block;
+
 }
 
 .sub-title {

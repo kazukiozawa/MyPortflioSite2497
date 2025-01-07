@@ -1,8 +1,8 @@
 @use "../globals" as *;
 
 .sticky {
-  &__area-workEx {
-  }
+  // &__area-workEx {
+  // }
 
   &__img-wrap-workEx {
     max-width: 336px;
@@ -35,10 +35,6 @@
       margin-top: 64px;
       padding-left: 400px;
     }
-  }
-
-  &__containerEx {
-    // margin-left: 400px;
   }
 
   &__bg4 {

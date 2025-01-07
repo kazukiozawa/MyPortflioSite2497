@@ -26,8 +26,8 @@ class Main {
             // new ScrollObserver('.swiper', this.#toggleSlideAnimation.bind(this), { once: false }),
             // new ScrollObserver('.cover-slide', this.#inviewAnimation),
             // new ScrollObserver('.appear', this.#inviewAnimation),
-            // new ScrollObserver('.tween-animate-title', this.#textAnimation)
-            // new ScrollObserver('.vision__data-inner', this.#testAnimation)
+            new ScrollObserver('.about', this.#inviewAnimation, {rootMargin: "-10%"}),
+            new ScrollObserver('.main-title', this.#textAnimation, {rootMargin: "-18%"}),
             new ScrollObserver('.vision__row', this.#visionAnimation, {rootMargin: "-10%"})
         )
     }
@@ -48,13 +48,13 @@ class Main {
             ta.animate();
         }
     }
-    #testAnimation(el, inview) {
-        if(inview) {
-            const ta = new TweenTextAnimation(el);
-            // ta.typeAnimate();
-            ta.typeAnimate();
-        }
-    }
+    // #testAnimation(el, inview) {
+    //     if(inview) {
+    //         const ta = new TweenTextAnimation(el);
+    //         // ta.typeAnimate();
+    //         ta.typeAnimate();
+    //     }
+    // }
     #visionAnimation(el, inview) {
         if(inview) {
              const va = new TestTextAnimation(el);

@@ -1,10 +1,10 @@
 @charset "UTF-8";
 .appear.up .item {
-  transform: translateY(6px);
+  transform: translateY(20px);
 }
 
 .appear.down .item {
-  transform: translateY(-6px);
+  transform: translateY(-20px);
 }
 
 .appear.left .item {
@@ -639,7 +639,7 @@ p {
   letter-spacing: 0.05em;
 }
 
-h1, h2, h3, h4, h5, span {
+h1, h2, h3, h4, h5 {
   color: #00040c;
 }
 
@@ -778,6 +778,16 @@ img {
   line-height: 1.2;
   color: #1565e6;
   font-weight: 500;
+  opacity: 0;
+}
+.main-title.inview {
+  opacity: 1;
+}
+.main-title.inview .char {
+  display: inline-block;
+}
+.main-title .char {
+  opacity: 0;
 }
 @media screen and (min-width: 960px) {
   .main-title {
