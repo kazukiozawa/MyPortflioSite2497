@@ -1,0 +1,9 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M65 225V95H255V225H65Z" stroke="white" stroke-width="10"/>
+<path d="M131 162L70 222" stroke="white" stroke-width="10"/>
+<path d="M254 226L189 162" stroke="white" stroke-width="10"/>
+<mask id="path-4-inside-1_1_3" fill="white">
+<path d="M260 92L160 191L60 92"/>
+</mask>
+<path d="M160 191L152.965 198.107L160 205.072L167.035 198.107L160 191ZM252.965 84.8935L152.965 183.893L167.035 198.107L267.035 99.1065L252.965 84.8935ZM167.035 183.893L67.0354 84.8935L52.9646 99.1065L152.965 198.107L167.035 183.893Z" fill="white" mask="url(#path-4-inside-1_1_3)"/>
+</svg>

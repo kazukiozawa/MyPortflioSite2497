@@ -406,9 +406,12 @@ img {
     padding-left: 102px;
     height: 312px;
   }
-
+  
   &__title {
     width: 100%;
+    position: absolute;
+    transition: transform .2s ease-in-out;
+    
     .main-title,
     .sub-title {
       color: $cWhite;
@@ -419,6 +422,40 @@ img {
     }
     .sub-title {
       margin-bottom: 0;
+    }
+
+    &-alter {
+      position: absolute; 
+      transform : translateY(-110%);
+      color: $cWhite;
+      transition: transform .2s ease-in-out;
+
+      & .main-title {
+        display: block;
+        color: $cWhite;
+      }
+      & .sub-title {
+        color: $cWhite;
+      }
+    }
+
+    &-wrap {
+      overflow: hidden; 
+      height: 64px;
+      display: flex;
+      align-items: center;
+      flex-grow : 1;
+      width: 100%;
+      position: relative;
+
+      @include mq(md) {
+        width: auto;
+
+      }
+      
+      @include mq(lg) {
+        height: 80px;
+      }
     }
   }
 
@@ -450,9 +487,75 @@ img {
       max-width: 1080px;
       //////////!!!
     }
+
+    &:hover {
+      // background-color: black;
+      .contact__bg-mail {
+        transform: translateY(100%);
+        
+        // @include animation(
+          //   $name: kf-mail-disappear,
+          //   $iteration-count: 2,
+          //   $direction: alternate,
+          //   $duration: .8s,
+          //   $timing-function: ease-in-out,
+          //   $fill-mode: both
+          // );
+          // background-color: red;
+          //   @include animation(
+            //   $name: kf-color,
+            //   $duration: 1.6s,
+            //   $timing-function: ease-in-out,
+            //   $fill-mode: both
+            // );
+            
+          }
+          .contact__bg-mark {
+            transform: translateY(0%);
+            //   @include animation(
+      //   $name: kf-mark-appear,
+      //   $iteration-count: 2,
+      //   $direction: alternate,
+      //   $duration: .8s,
+      //   $timing-function: ease-in-out,
+      //   $fill-mode: both
+      // );
+      }
+
+      .contact__title {
+        transform: translateY(110%);
+      }
+      .contact__title-alter {
+        transform: translateY(0%);
+      }
+    }
+
+    // &:not(:hover) {
+    //   // ホバー外れた時のアニメーション（逆方向）
+    //   .contact__bg-mail {
+    //     @include animation(
+    //       $name: kf-mail-appear,
+    //       $duration: .8s,
+    //       $timing-function: ease-in-out,
+    //       $fill-mode: both
+    //     );
+    //   }
+  
+    //   .contact__bg-mark {
+    //     @include animation(
+    //       $name: kf-mark-disappear,
+    //       $iteration-count: 1,
+    //       $direction: alternate,
+    //       $duration: .8s,
+    //       $timing-function: ease-in-out,
+    //       $fill-mode: both
+    //     );
+    //   }
+    // }
   }
 
   &__bg {
+    flex-grow: 0;
     height: 108px;
     width: 108px;
     // max-width: 120px;
@@ -464,11 +567,35 @@ img {
     align-items: center;
     margin-top: 16px;
     margin-bottom: 52px;
+    position: relative;
+    overflow: hidden;
 
     &-mail {
+      transition: transform .2s ease-in-out;
+      background-image: url(../images/letter2.svg);
+      background-size: cover;
       width: 100%;
-      height: auto;
-      stroke: $cWhite;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    &-mark {
+      background-image: url(../images/jumpMark.svg);
+      transition: transform .2s ease-in-out;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform: translateY(-100%);
     }
 
     @include mq(md) {
@@ -480,6 +607,43 @@ img {
     }
   }
 }
+
+@keyframes kf-mark-appear {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    // transform-origin: right;
+    transform: translateY(0%);
+  }
+}
+@keyframes kf-mark-disappear {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes kf-mail-disappear {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    // transform-origin: right;
+    transform: translateY(100%);
+  }
+}
+@keyframes kf-mail-appear {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 
 .footer {
   background-color: $cBlue;
@@ -545,6 +709,7 @@ img {
     text-align: center;
     color: $cWhite;
     font-size: 12px;
+    line-height: 1;
 
     &__wrap {
       width: 100%;

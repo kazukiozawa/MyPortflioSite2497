@@ -996,6 +996,8 @@ img {
 }
 .contact__title {
   width: 100%;
+  position: absolute;
+  transition: transform 0.2s ease-in-out;
 }
 .contact__title .main-title,
 .contact__title .sub-title,
@@ -1009,6 +1011,38 @@ img {
 }
 .contact__title .sub-title, .contact__title .boldSub-title {
   margin-bottom: 0;
+}
+.contact__title-alter {
+  position: absolute;
+  transform: translateY(-110%);
+  color: #ffffff;
+  transition: transform 0.2s ease-in-out;
+}
+.contact__title-alter .main-title {
+  display: block;
+  color: #ffffff;
+}
+.contact__title-alter .sub-title, .contact__title-alter .boldSub-title {
+  color: #ffffff;
+}
+.contact__title-wrap {
+  overflow: hidden;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 600px) {
+  .contact__title-wrap {
+    width: auto;
+  }
+}
+@media screen and (min-width: 960px) {
+  .contact__title-wrap {
+    height: 80px;
+  }
 }
 .contact__inner {
   height: 100%;
@@ -1040,7 +1074,20 @@ img {
     max-width: 1080px;
   }
 }
+.contact__link:hover .contact__bg-mail {
+  transform: translateY(100%);
+}
+.contact__link:hover .contact__bg-mark {
+  transform: translateY(0%);
+}
+.contact__link:hover .contact__title {
+  transform: translateY(110%);
+}
+.contact__link:hover .contact__title-alter {
+  transform: translateY(0%);
+}
 .contact__bg {
+  flex-grow: 0;
   height: 108px;
   width: 108px;
   border: 2px solid #ffffff;
@@ -1050,11 +1097,35 @@ img {
   align-items: center;
   margin-top: 16px;
   margin-bottom: 52px;
+  position: relative;
+  overflow: hidden;
 }
 .contact__bg-mail {
+  transition: transform 0.2s ease-in-out;
+  background-image: url(../images/letter2.svg);
+  background-size: cover;
   width: 100%;
-  height: auto;
-  stroke: #ffffff;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.contact__bg-mark {
+  background-image: url(../images/jumpMark.svg);
+  transition: transform 0.2s ease-in-out;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(-100%);
 }
 @media screen and (min-width: 600px) {
   .contact__bg {
@@ -1068,6 +1139,38 @@ img {
   }
 }
 
+@keyframes kf-mark-appear {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes kf-mark-disappear {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes kf-mail-disappear {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes kf-mail-appear {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 .footer {
   background-color: #1565e6;
   color: #ffffff;
@@ -1134,6 +1237,7 @@ img {
   text-align: center;
   color: #ffffff;
   font-size: 12px;
+  line-height: 1;
 }
 .footer .copyright__wrap {
   width: 100%;
