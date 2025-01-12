@@ -1,9 +1,9 @@
 class mvAnimation {
     constructor(el) {
         this.DOM = {};
-        this.DOM.titleFisrt = document.querySelector('.top-title-first');
-        this.DOM.titleSecond = document.querySelector('.top-title-second');
-        this.DOM.titleThird = document.querySelector('.top-title-third');
+        this.DOM.titleFisrt = document.querySelector('.top-title__first');
+        this.DOM.titleSecond = document.querySelector('.top-title__second');
+        this.DOM.titleThird = document.querySelector('.top-title__third');
         this.DOM.catch = document.querySelector('.catch');
         this.DOM.slide = document.querySelector('.mv__slide-gsap');
         this.DOM.descript = document.querySelector('.mv__slide-descript');
