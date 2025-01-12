@@ -234,46 +234,91 @@ img {
   align-items: center;
   padding-right: 5px;
 
-  // & .view-more {
+  &:hover {
+    .viewmore {
+      transform: translateY(120%);
+      
+      & span, .arrow-right {
+        color: $cBlue;
 
-  // }
+      }
+    }
+    .viewmore-alter {
+      transform: translateY(6px);
+      color: $cBlue;
+      & span, .arrow-right {
+        color: $cBlue;
+  
+      }
+    }
+  }
 }
 
-.view-more {
+.viewmore {
+  position: absolute;
+  transform: translateY(6px);
+  transition: transform .3s ease-in-out;
+  
   span {
     vertical-align: middle;
     font-size: 16px;
+    transition: color .2s ease-in-out;
 
     @include mq(lg) {
       font-size: 20px;
     }
   }
-
-  .arrow-right {
-    display: inline-block;
-    color: #333;
-    line-height: 1;
-    position: relative;
-    width: 19px;
-    height: 2px;
-    background: currentColor;
-    margin-left: 4px;
+  
+  &-wrap {
+    overflow: hidden; 
+    position: relative; 
+    width: 148px;
+    height: 30px;
+    margin-left: auto;
+    
   }
-
-  .arrow-right::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    border: 2px solid currentColor;
-    border-left: 0;
-    border-bottom: 0;
-    transform: rotate(45deg);
-    transform-origin: top right;
+  
+  &-alter {
     position: absolute;
-    top: 50%;
-    right: -0.05em;
-    box-sizing: border-box;
+    transform: translateY(-120%);
+    transition: transform .3s ease-in-out;
+    
+    span {
+      transition: color .2s ease-in-out;
+      vertical-align: middle;
+      font-size: 16px;
+      
+      @include mq(lg) {
+        font-size: 20px;
+      }
+    }
   }
+
+}
+.arrow-right {
+  display: inline-block;
+  color: #333;
+  line-height: 1;
+  position: relative;
+  width: 19px;
+  height: 2px;
+  background: currentColor;
+  margin-left: 4px;
+}
+
+.arrow-right::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(45deg);
+  transform-origin: top right;
+  position: absolute;
+  top: 50%;
+  right: -0.05em;
+  box-sizing: border-box;
 }
 
 .main {
@@ -410,7 +455,7 @@ img {
   &__title {
     width: 100%;
     position: absolute;
-    transition: transform .2s ease-in-out;
+    transition: transform .3s ease-in-out;
     
     .main-title,
     .sub-title {
@@ -428,7 +473,7 @@ img {
       position: absolute; 
       transform : translateY(-110%);
       color: $cWhite;
-      transition: transform .2s ease-in-out;
+      transition: transform .3s ease-in-out;
 
       & .main-title {
         display: block;
@@ -571,7 +616,7 @@ img {
     overflow: hidden;
 
     &-mail {
-      transition: transform .2s ease-in-out;
+      transition: transform .3s ease-in-out;
       background-image: url(../images/letter2.svg);
       background-size: cover;
       width: 100%;
@@ -585,7 +630,7 @@ img {
     }
     &-mark {
       background-image: url(../images/jumpMark.svg);
-      transition: transform .2s ease-in-out;
+      transition: transform .3s ease-in-out;
       background-size: cover;
       width: 100%;
       height: 100%;

@@ -1,4 +1,5 @@
 @use "../globals" as *;
+@use "../parts/common" as *;
 
 $cMenuClose: $cBlack;
 $cMenuOpen: $cBlue;
@@ -22,11 +23,6 @@ $cMenuOpen: $cBlue;
     padding-left: 8.415vw;
   }
 
-  .main-title,
-  .sub-title {
-    color: $cWhite;
-  
-  }
 }
 
 .mobile-menu {
@@ -38,6 +34,18 @@ $cMenuOpen: $cBlue;
     &-third {
     color: $cWhite; 
   }
+  }
+
+  &__main-title {
+    @extend .main-title;
+    color: $cWhite;
+    
+  }
+  
+  &__sub-title {
+    @extend .sub-title;
+    color: $cWhite;
+
   }
 
   &__btn {

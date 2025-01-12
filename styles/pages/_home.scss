@@ -372,6 +372,25 @@
       @include mq(md) {
         flex-direction: row;
       }
+
+      &:hover {
+        .viewmore {
+          transform: translateY(110%);
+          
+          & span, .arrow-right {
+            color: $cBlue;
+    
+          }
+        }
+        .viewmore-alter {
+          transform: translateY(3px);
+          color: $cBlue;
+          & span, .arrow-right {
+            color: $cBlue;
+      
+          }
+        }
+      }
     }
 
     &-info {
