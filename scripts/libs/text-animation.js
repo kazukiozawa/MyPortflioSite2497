@@ -218,6 +218,6 @@ class TestTextAnimation  {
                             });
                         });
 
-                    }ｓ
+                    }
     }
 }

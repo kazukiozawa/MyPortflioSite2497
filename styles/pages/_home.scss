@@ -354,15 +354,50 @@
   @extend .basic-section;
 
   &__item {
-    display: flex;
+    &-link {
+      display: flex;
+
+    }
 
     &:nth-child(1) {
-      .work__item-link {
+      .work__item-content {
         border-top: 1px solid $cBlack;
       }
     }
 
-    &-link {
+    &:hover {
+
+      .work__number {
+        color: red; // 例: 色を変更
+        font-weight: bold; // 例: フォントを太字に変更
+
+        &-index {
+          color: $cBlue;
+        }
+        &-maxIndex {
+          color: $cBlue;
+        }
+      } 
+
+      .viewmore {
+        transform: translateY(110%);
+        
+        & span, .arrow-right {
+          color: $cBlue;
+  
+        }
+      }
+      .viewmore-alter {
+        transform: translateY(3px);
+        color: $cBlue;
+        & span, .arrow-right {
+          color: $cBlue;
+    
+        }
+      }
+    }
+
+    &-content {
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -373,24 +408,6 @@
         flex-direction: row;
       }
 
-      &:hover {
-        .viewmore {
-          transform: translateY(110%);
-          
-          & span, .arrow-right {
-            color: $cBlue;
-    
-          }
-        }
-        .viewmore-alter {
-          transform: translateY(3px);
-          color: $cBlue;
-          & span, .arrow-right {
-            color: $cBlue;
-      
-          }
-        }
-      }
     }
 
     &-info {
@@ -409,6 +426,7 @@
       }
     }
   }
+
   &__number {
     width: 10vw;
     padding-top: 16px;
@@ -422,15 +440,28 @@
       font-size: 32px;
       color: $cBlue;
       font-weight: bold;
-    }
+      transition: color .3s ease-in-out;
+      
+      @include mq(lg) {
+        color: $cBlack;
+        font-size: 36px;
 
+      }
+    }
+    
     &-maxIndex {
       display: none;
       color: $cBlue;
       font-size: 16px;
-
+      transition: color .3s ease-in-out;
+      
       @include mq(md) {
         display: inline;
+      }
+      
+      @include mq(lg) {
+        color: $cBlack;
+
       }
     }
   }

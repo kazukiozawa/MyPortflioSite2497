@@ -29,9 +29,9 @@ $cMenuOpen: $cBlue;
   .top-title {
     margin-bottom: 9vh;
 
-    &-first,
-    &-second,
-    &-third {
+    &__first,
+    &__second,
+    &__third {
     color: $cWhite; 
   }
   }
@@ -92,10 +92,14 @@ $cMenuOpen: $cBlue;
   }
 
   &__item {
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
   }
   &__link {
     display: block;
+  }
+
+  &__main-title {
+    opacity: 1;
   }
 
   // &__main {

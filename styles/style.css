@@ -686,7 +686,7 @@ img {
 }
 
 .main {
-  width: calc(100% - 39px);
+  width: calc(100% - 40px);
   margin-left: 40px;
 }
 @media screen and (min-width: 600px) {
@@ -1309,7 +1309,7 @@ img {
 .mobile-menu .top-title {
   margin-bottom: 9vh;
 }
-.mobile-menu .top-title-first, .mobile-menu .top-title-second, .mobile-menu .top-title-third {
+.mobile-menu .top-title__first, .mobile-menu .top-title__second, .mobile-menu .top-title__third {
   color: #ffffff;
 }
 .mobile-menu__main-title {
@@ -1357,10 +1357,13 @@ img {
   transition: all 0.6s;
 }
 .mobile-menu__item {
-  margin-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 .mobile-menu__link {
   display: block;
+}
+.mobile-menu__main-title {
+  opacity: 1;
 }
 
 .menu-open #mobile-menu__container {
@@ -1819,13 +1822,36 @@ img {
   cursor: pointer;
 }
 
-.work__item {
+.work__item-link {
   display: flex;
 }
-.work__item:nth-child(1) .work__item-link {
+.work__item:nth-child(1) .work__item-content {
   border-top: 1px solid #00040c;
 }
-.work__item-link {
+.work__item:hover .work__number {
+  color: red;
+  font-weight: bold;
+}
+.work__item:hover .work__number-index {
+  color: #1565e6;
+}
+.work__item:hover .work__number-maxIndex {
+  color: #1565e6;
+}
+.work__item:hover .viewmore {
+  transform: translateY(110%);
+}
+.work__item:hover .viewmore span, .work__item:hover .viewmore .arrow-right {
+  color: #1565e6;
+}
+.work__item:hover .viewmore-alter {
+  transform: translateY(3px);
+  color: #1565e6;
+}
+.work__item:hover .viewmore-alter span, .work__item:hover .viewmore-alter .arrow-right {
+  color: #1565e6;
+}
+.work__item-content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -1833,22 +1859,9 @@ img {
   padding: 16px;
 }
 @media screen and (min-width: 600px) {
-  .work__item-link {
+  .work__item-content {
     flex-direction: row;
   }
-}
-.work__item-link:hover .viewmore {
-  transform: translateY(110%);
-}
-.work__item-link:hover .viewmore span, .work__item-link:hover .viewmore .arrow-right {
-  color: #1565e6;
-}
-.work__item-link:hover .viewmore-alter {
-  transform: translateY(3px);
-  color: #1565e6;
-}
-.work__item-link:hover .viewmore-alter span, .work__item-link:hover .viewmore-alter .arrow-right {
-  color: #1565e6;
 }
 .work__item-info {
   display: flex;
@@ -1879,15 +1892,28 @@ img {
   font-size: 32px;
   color: #1565e6;
   font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+@media screen and (min-width: 960px) {
+  .work__number-index {
+    color: #00040c;
+    font-size: 36px;
+  }
 }
 .work__number-maxIndex {
   display: none;
   color: #1565e6;
   font-size: 16px;
+  transition: color 0.3s ease-in-out;
 }
 @media screen and (min-width: 600px) {
   .work__number-maxIndex {
     display: inline;
+  }
+}
+@media screen and (min-width: 960px) {
+  .work__number-maxIndex {
+    color: #00040c;
   }
 }
 .work__thum {
