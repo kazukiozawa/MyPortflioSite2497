@@ -152,7 +152,7 @@ class TestTextAnimation  {
                             // timeline.fromTo の完了後に実行
                             this.DOM.dataInner.classList.add('appear');
                             this.DOM.chars.forEach((c, i) => {
-                                console.log('neko');
+                    
                                 gsap.to(c, .1, {
                                     delay: i * .05,
                                     startAt: { opacity: 0 },
@@ -201,7 +201,7 @@ class TestTextAnimation  {
                             // timeline.fromTo の完了後に実行
                             this.DOM.dataInner.classList.add('appear');
                             this.DOM.chars.forEach((c, i) => {
-                                console.log('neko');
+                    
                                 gsap.to(c, .1, {
                                     delay: i * .05,
                                     startAt: { opacity: 0 },
