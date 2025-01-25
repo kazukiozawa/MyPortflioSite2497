@@ -14,13 +14,18 @@ $cMenuOpen: $cBlue;
   right: 0;
   bottom: 0;
   padding: 11vh 20px;
-  display: none;
-  // transform: scale(0);
-
+  margin-left: 40px;
+  transform-origin: top;
+  transition: transform .7s ease-in-out;
+  transform: translateY(-100vh);
+  // display: none;
+  
   @include mq(md) {
     padding-right: 8.415vw;
     padding-left: 8.415vw;
+    margin-left: 78px;
   }
+
 }
 
 .mobile-menu {
@@ -119,28 +124,21 @@ $cMenuOpen: $cBlue;
 
   & #mobile-menu__container {
     display: block;
-    transform-origin: top;
-    margin-left: 40px;
-    // transition: transform .8s;
-    // transform: scale(1);
-    @include animation(
-      $name: kf-menu-appear,
-      $duration: 0.7s,
-      $timing-function: ease-in-out,
-      $fill-mode: both
-    );
+    transition: transform .7s ease-in-out;
+    transform: translateY(0);
 
-    @include mq(md) {
-      margin-left: 78px;
-    }
+
+
+    // @include animation(
+    //   $name: kf-menu-appear,
+    //   $duration: 0.7s,
+    //   $timing-function: ease-in-out,
+    //   $fill-mode: both
+    // );
+
   }
 
   & .mobile-menu {
-    
-    // &__cover {
-    //   opacity: 1;
-    //   visibility: visible;
-    // }
     &__item {
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
@@ -294,22 +292,22 @@ $cMenuOpen: $cBlue;
 //   }
 // }
 
-// @keyframes kf-menu-appear {
-//   0% {
-//     transform: scaleY(0);
-//   }
-//   100% {
-//     transform: scaleY(1);
-//   }
-// }
+@keyframes kf-menu-appear {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 
-// @keyframes kf-title-appear {
-//   0% {
-//     transform: translateY(50%);
-//     opacity: 0;
-//   }
-//   100% {
-//     transform: translateY(0px);
-//     opacity: 1;
-//   }
-// }
+@keyframes kf-title-appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

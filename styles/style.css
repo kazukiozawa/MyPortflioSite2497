@@ -1302,12 +1302,16 @@ img {
   right: 0;
   bottom: 0;
   padding: 11vh 20px;
-  display: none;
+  margin-left: 40px;
+  transform-origin: top;
+  transition: transform 0.7s ease-in-out;
+  transform: translateY(-100vh);
 }
 @media screen and (min-width: 600px) {
   #mobile-menu__container {
     padding-right: 8.415vw;
     padding-left: 8.415vw;
+    margin-left: 78px;
   }
 }
 
@@ -1379,20 +1383,8 @@ img {
 
 .menu-open #mobile-menu__container {
   display: block;
-  transform-origin: top;
-  margin-left: 40px;
-  animation-name: kf-menu-appear;
-  animation-duration: 0.7s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
-}
-@media screen and (min-width: 600px) {
-  .menu-open #mobile-menu__container {
-    margin-left: 78px;
-  }
+  transition: transform 0.7s ease-in-out;
+  transform: translateY(0);
 }
 .menu-open .mobile-menu__item:nth-child(1) .mobile-menu__link {
   animation-delay: 0.9s;
@@ -1439,6 +1431,24 @@ img {
   transform: translateY(-3px) rotate(225deg);
 }
 
+@keyframes kf-menu-appear {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes kf-title-appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .mv {
   position: relative;
   height: 94vh;
