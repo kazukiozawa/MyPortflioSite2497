@@ -244,7 +244,7 @@ img {
       }
     }
     .viewmore-alter {
-      transform: translateY(6px);
+      transform: translateY(0px);
       color: $cBlue;
       & span, .arrow-right {
         color: $cBlue;
@@ -256,8 +256,9 @@ img {
 
 .viewmore {
   position: absolute;
-  transform: translateY(6px);
+  // transform: translateY(6px);
   transition: transform .3s ease-in-out;
+  height: 30px;
   
   span {
     vertical-align: middle;
@@ -274,6 +275,7 @@ img {
     position: relative; 
     width: 148px;
     height: 30px;
+    line-height: 30px;
     margin-left: auto;
     
   }

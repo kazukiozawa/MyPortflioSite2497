@@ -618,7 +618,7 @@ img {
   color: #1565e6;
 }
 .viewmore-link:hover .viewmore-alter {
-  transform: translateY(6px);
+  transform: translateY(0px);
   color: #1565e6;
 }
 .viewmore-link:hover .viewmore-alter span, .viewmore-link:hover .viewmore-alter .arrow-right {
@@ -627,8 +627,8 @@ img {
 
 .viewmore {
   position: absolute;
-  transform: translateY(6px);
   transition: transform 0.3s ease-in-out;
+  height: 30px;
 }
 .viewmore span {
   vertical-align: middle;
@@ -645,6 +645,7 @@ img {
   position: relative;
   width: 148px;
   height: 30px;
+  line-height: 30px;
   margin-left: auto;
 }
 .viewmore-alter {
@@ -1352,13 +1353,16 @@ img {
   width: 24px;
   transform: rotate(270deg);
   margin-top: 24px;
+  transition: transform 0.3s ease-in;
+  transition-delay: 0.5s;
 }
 .mobile-menu__btn span {
   display: block;
   height: 1px;
   width: 100%;
   background-color: #00040c;
-  transition: all 0.6s;
+  transition: transform 0.4s ease-in-out, opacity 0.4s;
+  transition-delay: 0s;
 }
 .mobile-menu__item {
   margin-bottom: 2vh;
@@ -1391,19 +1395,19 @@ img {
   }
 }
 .menu-open .mobile-menu__item:nth-child(1) .mobile-menu__link {
-  animation-delay: 1.1s;
+  animation-delay: 0.9s;
 }
 .menu-open .mobile-menu__item:nth-child(2) .mobile-menu__link {
-  animation-delay: 1.2s;
+  animation-delay: 1s;
 }
 .menu-open .mobile-menu__item:nth-child(3) .mobile-menu__link {
-  animation-delay: 1.3s;
+  animation-delay: 1.1s;
 }
 .menu-open .mobile-menu__item:nth-child(4) .mobile-menu__link {
-  animation-delay: 1.4s;
+  animation-delay: 1.2s;
 }
 .menu-open .mobile-menu__item:nth-child(5) .mobile-menu__link {
-  animation-delay: 1.5s;
+  animation-delay: 1.3s;
 }
 .menu-open .mobile-menu__link {
   animation-name: kf-title-appear;
@@ -1414,108 +1418,27 @@ img {
   animation-direction: normal;
   animation-fill-mode: both;
 }
+.menu-open .mobile-menu__btn .borders-wrap {
+  transition-delay: 0s;
+  transform: rotate(180deg);
+}
 .menu-open .mobile-menu__btn span {
+  transition: transform 0.4s ease-in-out, opacity 0.4s;
+  transition-delay: 0.5s;
   transform-origin: center;
   display: block;
 }
 .menu-open .mobile-menu__btn span:nth-child(1) {
-  animation-name: kf-span-top;
-  animation-duration: 0.7s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
+  transform: translateY(3px) rotate(135deg);
 }
 .menu-open .mobile-menu__btn span:nth-child(2) {
-  animation-name: kf-span-middle;
-  animation-duration: 0.7s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
+  transform: rotate(0deg);
+  opacity: 0;
 }
 .menu-open .mobile-menu__btn span:nth-child(3) {
-  animation-name: kf-span-end;
-  animation-duration: 0.7s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
+  transform: translateY(-3px) rotate(225deg);
 }
 
-@keyframes kf-span-top {
-  0% {
-    rotate: 0deg;
-  }
-  35% {
-    transform: translateX(3px) translateY(3px) rotate(90deg);
-  }
-  60% {
-    transform: translateX(3px) translateY(3px) rotate(90deg);
-  }
-  60.1% {
-    transform: translateX(3px) translateY(3px) rotate(90deg);
-  }
-  100% {
-    transform: translateX(0) translateY(3px) rotate(135deg);
-  }
-}
-@keyframes kf-span-middle {
-  0% {
-    rotate: 0deg;
-  }
-  35% {
-    transform: rotate(90deg);
-  }
-  60% {
-    transform: rotate(90deg);
-  }
-  60.1% {
-    transform: rotate(90deg);
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes kf-span-end {
-  0% {
-    rotate: 0deg;
-  }
-  35% {
-    transform: translateX(-3px) translateY(-3px) rotate(90deg);
-  }
-  60% {
-    transform: translateX(-3px) translateY(-3px) rotate(90deg);
-  }
-  60.1% {
-    transform: translateX(-3px) translateY(-3px) rotate(90deg);
-  }
-  100% {
-    transform: translateX(0) translateY(-3px) rotate(225deg);
-  }
-}
-@keyframes kf-menu-appear {
-  0% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-@keyframes kf-title-appear {
-  0% {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
 .mv {
   position: relative;
   height: 94vh;
