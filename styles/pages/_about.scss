@@ -19,6 +19,7 @@
 .aboutMv {
   // margin-top: -323px;
   position: relative;
+  overflow: hidden;
   // z-index: -100;
   //!
 
@@ -30,17 +31,24 @@
   &__bg {
     margin-left: -40px;
     height: 376px;
-    background-image: url(../images/authorBg.webp);
-    background-size: cover;
-    background-position: center;
+    overflow-y: hidden;
     filter: blur(20px);
-
+    
     @include mq(md) {
       margin-left: -78px;
       height: 416px;
     }
     @include mq(lg) {
       margin-left: -102px;
+    }
+    
+    &-inside {
+      background-image: url(../images/authorBg.webp);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+
     }
   }
 

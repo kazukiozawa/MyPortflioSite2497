@@ -30,7 +30,7 @@ $cMenuOpen: $cBlue;
 
 .mobile-menu {
   .top-title {
-    margin-bottom: 9vh;
+    margin-bottom: 14vh;
 
     &__first,
     &__second,
@@ -95,14 +95,22 @@ $cMenuOpen: $cBlue;
   }
 
   &__item {
-    margin-bottom: 2vh;
+    margin-bottom: 2.1vh;
   }
   &__link {
-    display: block;
+    display: flex;
+    align-items: flex-end;
+
   }
 
   &__main-title {
     opacity: 1;
+    line-height: 1;
+  }
+  &__sub-title {
+    line-height: 1;
+    margin-bottom: 5px;
+    margin-left: 8px;
   }
 
   // &__main {

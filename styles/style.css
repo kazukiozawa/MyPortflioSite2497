@@ -643,10 +643,15 @@ img {
 .viewmore-wrap {
   overflow: hidden;
   position: relative;
-  width: 148px;
+  width: 124px;
   height: 30px;
   line-height: 30px;
   margin-left: auto;
+}
+@media screen and (min-width: 960px) {
+  .viewmore-wrap {
+    width: 148px;
+  }
 }
 .viewmore-alter {
   position: absolute;
@@ -1316,7 +1321,7 @@ img {
 }
 
 .mobile-menu .top-title {
-  margin-bottom: 9vh;
+  margin-bottom: 14vh;
 }
 .mobile-menu .top-title__first, .mobile-menu .top-title__second, .mobile-menu .top-title__third {
   color: #ffffff;
@@ -1369,13 +1374,20 @@ img {
   transition-delay: 0s;
 }
 .mobile-menu__item {
-  margin-bottom: 2vh;
+  margin-bottom: 2.1vh;
 }
 .mobile-menu__link {
-  display: block;
+  display: flex;
+  align-items: flex-end;
 }
 .mobile-menu__main-title {
   opacity: 1;
+  line-height: 1;
+}
+.mobile-menu__sub-title {
+  line-height: 1;
+  margin-bottom: 5px;
+  margin-left: 8px;
 }
 .mobile-menu__item {
   overflow: hidden;
@@ -1808,9 +1820,12 @@ img {
     margin-left: 16px;
   }
 }
-.work__item-info .view-more {
+.work__item-info .viewmore {
   text-align: end;
   font-size: 14px;
+}
+.work__item-info .viewmore-wrap {
+  margin-top: 16px;
 }
 .work__number {
   width: 10vw;
@@ -1867,14 +1882,6 @@ img {
     max-width: 304px;
   }
 }
-.work__info-wrap {
-  height: 112px;
-}
-@media screen and (min-width: 600px) {
-  .work__info-wrap {
-    height: auto;
-  }
-}
 .work__date {
   font-size: 14px;
 }
@@ -1927,6 +1934,7 @@ img {
 
 .aboutMv {
   position: relative;
+  overflow: hidden;
 }
 @media screen and (min-width: 960px) {
   .aboutMv {
@@ -1936,9 +1944,7 @@ img {
 .aboutMv__bg {
   margin-left: -40px;
   height: 376px;
-  background-image: url(../images/authorBg.webp);
-  background-size: cover;
-  background-position: center;
+  overflow-y: hidden;
   filter: blur(20px);
 }
 @media screen and (min-width: 600px) {
@@ -1951,6 +1957,13 @@ img {
   .aboutMv__bg {
     margin-left: -102px;
   }
+}
+.aboutMv__bg-inside {
+  background-image: url(../images/authorBg.webp);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 .aboutMv__intro {
   margin-top: 104px;
@@ -2149,9 +2162,7 @@ img {
 .workMv__bg {
   margin-left: -40px;
   height: 222px;
-  background-image: url(../../images/cafeMv.jpg);
-  background-size: cover;
-  background-position: center;
+  overflow-y: hidden;
   filter: blur(20px);
 }
 @media screen and (min-width: 600px) {
@@ -2164,6 +2175,13 @@ img {
     height: 416px;
     margin-left: -102px;
   }
+}
+.workMv__bg-inside {
+  background-image: url(../../images/cafeMv.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 .workMv__intro {
   margin-top: 104px;

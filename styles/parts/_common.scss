@@ -273,10 +273,15 @@ img {
   &-wrap {
     overflow: hidden; 
     position: relative; 
-    width: 148px;
+    width: 124px;
     height: 30px;
     line-height: 30px;
     margin-left: auto;
+    
+    @include mq(lg){
+      width: 148px;
+      
+    }
     
   }
   

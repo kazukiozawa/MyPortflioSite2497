@@ -12,6 +12,7 @@ class Main {
 
     #init() {
         new MobileMenu;
+        new BgSlow;
         Pace.on('done', this.#scrollInit.bind(this));
     }
 

@@ -15,17 +15,24 @@
   &__bg {
     margin-left: -40px;
     height: 222px;
-    background-image: url(../../images/cafeMv.jpg);
-    background-size: cover;
-    background-position: center;
+    overflow-y: hidden;
     filter: blur(20px);
-
+    
     @include mq(md) {
       margin-left: -78px;
     }
     @include mq(lg) {
       height: 416px;
       margin-left: -102px;
+    }
+    
+    &-inside {
+      background-image: url(../../images/cafeMv.jpg);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+
     }
   }
 

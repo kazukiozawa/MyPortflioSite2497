@@ -24,3 +24,40 @@ class MobileMenu {
     // this.DOM.cover.addEventListener(this.eventType, this._toggle.bind(this));
   }
 }
+
+window.addEventListener('scroll', function () {
+  const scrollPosition = window.scrollY; // スクロール位置を取得
+  const bgInside = document.querySelector('.aboutMv__bg-inside');
+  
+  // 背景を動かす速度を調整（スクロール量の0.5倍で遅くする）
+  const speed = 0.5;
+  const offset = scrollPosition * speed;
+
+  // transformで背景の位置を変更
+ 
+});
+
+class BgSlow {
+  constructor (){
+    this.DOM = {};
+    this.DOM.bgInside = document.querySelector('.aboutMv__bg-inside') || document.querySelector('.workMv__bg-inside');
+    this.speed = .4;
+    this._EventSlow();
+    
+  }
+  
+  _EventSlow() {
+    window.addEventListener('scroll', function(){
+      if(!this.DOM.bgInside){
+        return;
+      }
+      const scrollPosition = window.scrollY;
+      const offset = scrollPosition * this.speed;
+      console.log(`offset${offset.toFixed(1)} = ${scrollPosition} * ${this.speed}`);
+      this.DOM.bgInside.style.transform = `translateY(${offset}px)`;
+      // console.log(scrollPosition);
+
+    }.bind(this))
+
+  }
+}
