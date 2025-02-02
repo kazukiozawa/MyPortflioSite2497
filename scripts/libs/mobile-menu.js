@@ -38,26 +38,33 @@ window.addEventListener('scroll', function () {
 });
 
 class BgSlow {
-  constructor (){
+  constructor (el){
     this.DOM = {};
-    this.DOM.bgInside = document.querySelector('.aboutMv__bg-inside') || document.querySelector('.workMv__bg-inside');
+    this.DOM.el = el instanceof HTMLElement ? el : document.querySelector(el);
+    // this.DOM.bgInside = document.querySelector('.aboutMv__bg-inside') || document.querySelector('.workMv__bg-inside');
+    // this.DOM.bgInside = document.querySelector(el);
+    console.log(1);
     this.speed = .4;
-    this._EventSlow();
+    this._EventSlow = this._EventSlow.bind(this);
     
+  }
+
+  addSlow() {
+    window.addEventListener('scroll', this._EventSlow);
+    this.DOM.el.style.willChange ='transform';
+  }
+  removeSlow() {
+    window.removeEventListener('scroll', this._EventSlow);
+    this.DOM.el.style.willChange ='';
   }
   
   _EventSlow() {
-    window.addEventListener('scroll', function(){
-      if(!this.DOM.bgInside){
-        return;
-      }
-      const scrollPosition = window.scrollY;
-      const offset = scrollPosition * this.speed;
-      console.log(`offset${offset.toFixed(1)} = ${scrollPosition} * ${this.speed}`);
-      this.DOM.bgInside.style.transform = `translateY(${offset}px)`;
-      // console.log(scrollPosition);
-
-    }.bind(this))
-
+    if(!this.DOM.el){
+      return;
+    }
+    const scrollPosition = window.scrollY;
+    const offset = scrollPosition * this.speed;
+    // console.log(`offset${offset.toFixed(1)} = ${scrollPosition} * ${this.speed}`);
+    this.DOM.el.style.transform = `translateY(${offset}px)`;
   }
 }

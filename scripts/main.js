@@ -4,15 +4,14 @@ class Main {
 
     constructor() {
         this.header = document.querySelector('.header');
-        // this.hero = new HeroSlider('.swiper');
         this.sides = document.querySelectorAll('.side');
+        this.bs = new BgSlow('#bg-inside');
         this.#init();
         // this.#scrollInit();
     }
 
     #init() {
         new MobileMenu;
-        new BgSlow;
         Pace.on('done', this.#scrollInit.bind(this));
     }
 
@@ -26,18 +25,27 @@ class Main {
             // new ScrollObserver('.nav-trigger', this.#navAnimation.bind(this), { once: false }),
             // new ScrollObserver('.swiper', this.#toggleSlideAnimation.bind(this), { once: false }),
             // new ScrollObserver('.cover-slide', this.#inviewAnimation),
-            // new ScrollObserver('.appear', this.#inviewAnimation),
+            new ScrollObserver('#bg-inside', this.#slowBackground.bind(this), { once: false }),
             new ScrollObserver('.about', this.#inviewAnimation, {rootMargin: "-15%"}),
             new ScrollObserver('.main-title', this.#textAnimation, {rootMargin: "-20%"}),
             new ScrollObserver('.vision__row', this.#visionAnimation , {rootMargin: "-20%", once: true}),
         )
     }
 
+    #slowBackground(el, inview) {
+    
+        if(inview){
+            this.bs.addSlow();
+        } else {
+            this.bs.removeSlow();
+        }
+    }
+
     #toggleSlideAnimation(el, inview) {
         if(inview) {
-            this.hero.start();
+            // this.hero.start();
         } else {
-            this.hero.stop();
+            // this.hero.stop();
         }
     }
 
